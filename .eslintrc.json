@@ -1,3 +1,36 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "quotes": "off",
+    "indent": ["off", 2],
+    "comma-dangle": "off",
+    "prefer-const": "off",
+    "no-lone-blocks": "off",
+    "object-shorthand": "off",
+    "func-call-spacing": "off",
+    "multiline-ternary": "off",
+    "react/display-name": "off",
+    "array-callback-return": "off",
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/exhaustive-deps": "off",
+
+    "@typescript-eslint/semi": "off",
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/quotes": "off",
+    "space-before-function-paren": "off",
+    "@typescript-eslint/comma-dangle": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/func-call-spacing": "off",
+    "@typescript-eslint/no-unsafe-argument": "off",
+    "@typescript-eslint/no-empty-object-type": "off",
+    "@typescript-eslint/prefer-optional-chain": "off",
+    "@typescript-eslint/member-delimiter-style": "off",
+    "@typescript-eslint/consistent-type-imports": "off",
+    "@typescript-eslint/method-signature-style": "error",
+    "@typescript-eslint/prefer-nullish-coalescing": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/space-before-function-paren": "off",
+    "@typescript-eslint/no-confusing-void-expression": "off",
+    "@typescript-eslint/explicit-function-return-type": "off"
+  }
 }

@@ -1,0 +1,187 @@
+.dayHeader {
+  border: 1px solid #115dfe;
+  background-color: #115dfe64;
+  width: 100%;
+  color: #115dfe;
+  text-align: center;
+  cursor: default;
+}
+
+/* .dayHeader:hover {
+  background-color: #033eb264;
+  color: #033eb2;
+  cursor: default;
+  transition: all 0.3s ease-in-out;
+} */
+
+.dayHeader_dark {
+  border: 1px solid #52a5e0;
+  background-color: #52a5e064;
+  color: #eff3f5;
+  width: 100%;
+  text-align: center;
+  cursor: default;
+}
+
+/* .dayHeader_dark:hover {
+  background-color: #115dfe64;
+  color: #eff3f5;
+  cursor: default;
+  transition: all 0.3s ease-in-out;
+} */
+
+.dayHeader:first-child {
+  border-radius: 6px 0 0 0;
+}
+.dayHeader:last-child {
+  border-radius: 0 6px 0 0;
+}
+
+.dayHeader_dark:first-child {
+  border-radius: 6px 0 0 0;
+}
+.dayHeader_dark:last-child {
+  border-radius: 0 6px 0 0;
+}
+
+.weekday {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #cdcdcd;
+  color: #696969;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  /* position: relative; */
+}
+.weekday_active {
+  background-color: #115dfe;
+  border-bottom: 1px solid #115dfe;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  /* position: relative; */
+}
+.weekday_dark {
+  background-color: #262749;
+  border-bottom: 1px solid #3a4c5a;
+  color: #eff3f5;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+}
+.weekday_dark_active {
+  background-color: #52a5e0;
+  border-bottom: 1px solid #52a5e0;
+  color: #eff3f5;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+}
+
+.weekday_container {
+  padding: 0;
+  margin: 0;
+  border: 1px solid #cdcdcd;
+  overflow: hidden;
+  position: relative;
+}
+.weekday_container_dark {
+  padding: 0;
+  margin: 0;
+  border: 1px solid #3a4c5a;
+  overflow: hidden;
+  position: relative;
+}
+
+.container_dayEvents {
+  background-color: #fff;
+  color: #696969;
+  height: 9rem;
+  padding: 2rem 0.3rem 0.3rem 0.3rem;
+  cursor: default;
+}
+/* .dayEvents:hover {
+  background-color: #efefefbf;
+  transition: all 0.3s ease-in-out;
+  cursor: default;
+} */
+.dayEvents_dark {
+  background-color: #9a90ef1a;
+  color: #c8cdd0;
+  height: 9rem;
+  padding: 2rem 0.3rem 0.3rem 0.3rem;
+  cursor: default;
+}
+.dayEvents_dark:hover {
+  background-color: #9a90ef44;
+  transition: all 0.3s ease-in-out;
+  cursor: default;
+}
+
+.eventCard_sm {
+  background-color: #f8f8f8;
+  padding: 0.25rem 0.4rem;
+  border-radius: 3px;
+  width: 100%;
+}
+.eventCard_sm:hover {
+  box-shadow: 0px 10px 12px -5px #cdcdcd;
+  background-color: red;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.eventCard {
+  background-color: #f8f8f8;
+  padding: 0.4rem 0.6rem;
+  border-radius: 3px;
+  width: 100%;
+}
+.eventCard:hover {
+  background-color: red;
+  transition: all 0.3s ease-in-out;
+}
+
+.dayEventList {
+  width: 100%;
+  border: 1px solid #cdcdcd;
+  background-color: #ffffff;
+  padding: 0.8rem;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.dayEventList_dark {
+  width: 100%;
+  border: 1px solid #3a4c5a;
+  background-color: #262749;
+  padding: 0.8rem;
+  border-radius: 6px;
+}
+
+/* --------------------------------------------------- Calendar Container --------------------------------------------------- */
+
+.calendarContainer {
+  padding: 1rem;
+  max-width: 100%;
+  color: #000;
+  border-radius: 6px;
+}
+
+@media (min-width: 1280px) {
+  .calendarContainer {
+    height: 740px;
+  }
+}
+@media (min-width: 1281px) {
+  .calendarContainer {
+    height: 580px;
+  }
+}

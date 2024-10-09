@@ -1,0 +1,107 @@
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  transition: box-shadow 150ms ease;
+  backdrop-filter: blur(1rem);
+}
+
+.header_dark {
+  position: sticky;
+  top: 0;
+  background-color: #484566;
+  transition: box-shadow 150ms ease;
+  backdrop-filter: blur(1rem);
+}
+
+/* .header_dark:hover {
+  background-color: #a01818;
+  transition: all 0.2s ease-in-out;
+} */
+
+.header::after {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 3px solid #004ee5;
+}
+
+.header_dark::after {
+  content: "";
+  background-color: #484566;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 3px solid #52a5e0;
+}
+
+/* .scrolled {
+  border-bottom: 2px solid red;
+  background-color: red;
+} */
+.row {
+  cursor: default;
+}
+
+.row_dark {
+  cursor: default;
+}
+
+.row:hover {
+  background-color: #efefef;
+  transition: all 0.2s ease-in-out;
+}
+
+.row_dark:hover {
+  background-color: #484566;
+  transition: all 0.2s ease-in-out;
+}
+
+.thead_row {
+  background-color: white;
+  color: #696969;
+}
+.thead_row_dark {
+  background-color: #484566;
+  color: #efefef;
+}
+
+.pagination_item {
+  border: 1px solid #cdcdcd;
+  background-color: #f8f8f8;
+  color: #696969;
+}
+.pagination_item:hover {
+  background-color: #efefef;
+  transition: all 0.3s ease-in-out;
+}
+.pagination_item[data-active] {
+  background-color: #115dfe;
+  color: #f8f8f8;
+}
+.pagination_item[data-active]:hover {
+  background-color: #52a5e0;
+  transition: all 0.3s ease-in-out;
+}
+.pagination_item_dark {
+  border: 1px solid #2a3b47;
+  background-color: #9a90ef1a;
+  color: #eff3f5;
+}
+.pagination_item_dark:hover {
+  background-color: #484566;
+  transition: all 0.3s ease-in-out;
+}
+.pagination_item_dark[data-active] {
+  background-color: #52a5e0;
+}
+.pagination_item_dark[data-active]:hover {
+  background-color: #115dfe;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Cambiar el nombre dbStyles*/
