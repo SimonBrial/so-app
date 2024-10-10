@@ -9,12 +9,15 @@ interface CalendarStoreProps {
   currentMonth: number;
   currentDay: number;
   eventsArray: EventsArray[];
+  eventsToDelete: EventsArray | string;
   fnShowCreateEventLayout: (stateValue: boolean) => void;
   fnPrevMonth: () => void;
   fnNextMonth: () => void;
   fnEventListGenerator: (date: Date) => EventsArray[];
   fnIsDateInCurrentMonth: (day: number, month: number, year: number) => boolean;
   fnCreateEvent: (eventToCreate: EventsArray) => Promise<void>;
+  fnDeleteEvent: (eventId: string) => Promise<void>;
+  fnGetEventToDelete: (eventId: string) => EventsArray | string;
   setCurrentMonth: (currentMonth: number) => void;
   setCurrentYear: (currentMonth: number) => void;
   setSameDay: (day: number, month: number) => boolean;
@@ -27,6 +30,7 @@ export const useCalendarStore = create<CalendarStoreProps>()((set, get) => {
   return {
     // Data
     eventsArray: MOCKEVENTS,
+    eventsToDelete: "",
     showCreateEventLayout: false,
     sameDay: false,
     onCurrentMonth: false,
@@ -109,6 +113,26 @@ export const useCalendarStore = create<CalendarStoreProps>()((set, get) => {
       } catch (err) {
         console.log(err);
       }
+    },
+    fnDeleteEvent: async (eventId) => {
+      try {
+        const { eventsArray } = get();
+        const newEventsArray = eventsArray.filter(
+          (event) => event.id !== eventId,
+        );
+        set({ eventsArray: newEventsArray });
+      } catch (err) {
+        console.log(err);
+      }
+    },
+    fnGetEventToDelete: (eventId) => {
+      // TODO: This function must be asynchronous becasue, the app make a request to server to search wich event going to be deleted
+      const { eventsArray } = get();
+      const eventFound = eventsArray.find((event) => event.id === eventId);
+      if (eventFound !== undefined) {
+        return eventFound;
+      }
+      return "Evento no encontrado!";
     },
   };
 });

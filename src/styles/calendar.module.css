@@ -175,13 +175,13 @@
   border-radius: 6px;
 }
 
-@media (min-width: 1280px) {
+@media (max-width: 1280px) {
   .calendarContainer {
     height: 740px;
   }
 }
 @media (min-width: 1281px) {
   .calendarContainer {
-    height: 580px;
+    height: 850px;
   }
 }

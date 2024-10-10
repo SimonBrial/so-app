@@ -2,21 +2,17 @@
 
 import InsideContainer from "@/components/container/InsideContainer";
 import CalendarContainer from "./calendarStructure/CalendarContainer";
-import { CountIndicator } from "@/components/CountIndicator";
-import { Box, Container, Flex, Stack } from "@mantine/core";
-import { HiOutlineCalendar } from "@/icons";
-import { BtnFilter } from "@/components/buttons/BtnFilter";
-import CalendarFilterLayout from "../layout/CalendarFilterLayout";
-import { BtnReportGenerate } from "@/components/buttons/BtnReportGenerate";
-import BtnAdd from "@/components/buttons/BtnAdd";
-import CalendarNewEventLayout from "../layout/CalendarNewEventLayout";
-import { AutoCompleteInput } from "@/components/inputs/AutoCompleteInput";
-import { useCalendarStore } from "@/store/calendar-store";
 
 export const CalendarGridView = () => {
-  const { fnShowCreateEventLayout, showCreateEventLayout, eventsArray } = useCalendarStore();
   return (
-    <Container
+    <InsideContainer offset={0} withBackground withBorder={true}>
+      <CalendarContainer />
+    </InsideContainer>
+  );
+};
+
+{
+  /* <Container
       p={0}
       style={{
         height: "2.5rem",
@@ -61,13 +57,10 @@ export const CalendarGridView = () => {
               <CalendarNewEventLayout />
             </BtnAdd>
           </Box>
-          {/* <ViewCalendarSelection /> */}
+          <ViewCalendarSelection />
         </Flex>
-        {/* <MonthNavigationBar /> */}
-        <InsideContainer offset={110} withBackground withBorder>
-          <CalendarContainer />
-        </InsideContainer>
-      </Stack>
-    </Container>
-  );
-};
+        <MonthNavigationBar />
+      </Stack> 
+      
+    </Container>*/
+}

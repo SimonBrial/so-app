@@ -61,7 +61,7 @@ export const SmallEventCard = ({
               : capitalizeFirstLetter(title)}
           </Title>
         </Flex>
-        <BtnActionEventSmall />
+        <BtnActionEventSmall eventId={id} />
       </Flex>
     </>
   );

@@ -26,12 +26,28 @@ import { useState } from "react";
 import classes from "@/styles/btn-styles.module.css";
 import { notifications } from "@mantine/notifications";
 import DeleteEventLayout from "../layout/DeleteEventLayout";
-import React from "react";
+import { useCalendarStore } from "@/store/calendar-store";
 
-export default function BtnActionEventSmall() {
+export default function BtnActionEventSmall({ eventId }: { eventId: string }) {
   const { colorScheme } = useMantineColorScheme();
   const [opened, { open, close }] = useDisclosure(false);
   const [showDrawer, setShowDrawer] = useState<boolean>(false);
+  const { fnDeleteEvent } = useCalendarStore();
+
+  const deleteEvent = async () => {
+    try {
+      await fnDeleteEvent(eventId);
+      notifications.show({
+        id: crypto.randomUUID(),
+        color: "#2BDD66",
+        title: "Evento Eliminado",
+        message: "El evento ha sido eliminado satisfactoriamente !",
+      });
+      close();
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       {/* This modal is to delete the alarm */}
@@ -47,7 +63,7 @@ export default function BtnActionEventSmall() {
         }}
       >
         <Stack>
-          <DeleteEventLayout />
+          <DeleteEventLayout eventToDeleteId={eventId} />
           <Flex align={"center"} gap={"sm"} style={{ height: "2.25rem" }}>
             <Button
               onClick={close}
@@ -75,17 +91,7 @@ export default function BtnActionEventSmall() {
                     : classes.btnAdd_dark,
               }}
               styles={{ section: { fontSize: "1.2rem" } }}
-              onClick={() => {
-                notifications.show({
-                  id: crypto.randomUUID(),
-                  color: "#2BDD66",
-                  title: "Recordatorio Eliminado",
-                  message: "Recordatorio eliminado satisfactoriamente!",
-                  autoClose: 1000,
-                  withCloseButton: true,
-                });
-                close();
-              }}
+              onClick={deleteEvent}
             >
               Aceptar
             </Button>
@@ -140,9 +146,9 @@ export default function BtnActionEventSmall() {
                       ? classes.btnAdd
                       : classes.btnAdd_dark,
                 }}
-                styles={({
+                styles={{
                   section: { fontSize: "1.2rem" },
-                })}
+                }}
                 onClick={() => {
                   setShowDrawer(false);
                   notifications.show({
