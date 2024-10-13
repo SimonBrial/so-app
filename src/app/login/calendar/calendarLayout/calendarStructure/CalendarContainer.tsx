@@ -6,8 +6,8 @@ import classes from "@/styles/calendar.module.css";
 import DayNavCalendar from "./gridView/DayNavCalendar";
 import DatesContainer from "./gridView/DatesContainer";
 
-// TODO: Agregar la opcion para añadir eventos.
-// TODO: Ajustar los dias del mes, que no se muevan.
+// TODO: Agregar la opcion para añadir eventos. ✅
+// TODO: Ajustar los dias del mes, que no se muevan. ✅
 // TODO: Refactorizar todo el codigo. ✅
 
 export default function CalendarContainer() {

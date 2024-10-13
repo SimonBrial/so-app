@@ -12,7 +12,7 @@ import React from "react";
 import HamburgerMenu from "./HamburgerMenu";
 import btnClasses from "@/styles/btn-styles.module.css";
 
-export default function AsideSearch(): JSX.Element {
+export default function ChatSearch(): JSX.Element {
   const { colorScheme } = useMantineColorScheme();
   return (
     <Flex align={"center"} gap={4}>

@@ -9,7 +9,7 @@ import {
   Flex,
   Text,
 } from "@mantine/core";
-import AsideSearch from "../AsideSearch";
+import AsideSearch from "../ChatSearch";
 import { UserContactCard } from "../UserContactCard";
 import InsideContainer from "@/components/container/InsideContainer";
 import { GeneralDivider } from "@/components/GeneralDivider";

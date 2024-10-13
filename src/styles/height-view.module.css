@@ -118,24 +118,59 @@
 }
 
 /* -------------------------- Chat Section -------------------------- */
-@media (min-width: 1280px) {
+/* @media (max-width: 1280px) {
   .chatCard_container {
     height: 83vh;
   }
 }
 @media (min-width: 1281px) {
   .chatCard_container {
+    height: 78vh;
+  }
+} */
+
+@media (max-height: 400px) {
+  .chatCard_container {
+    background-color: blueviolet;
+    height: 70.5vh; /*71.5vh*/
+  }
+}
+@media (min-height: 400px) and (max-height: 599px) {
+  .chatCard_container {
+    height: 70.5vh;
+  }
+}
+@media (min-height: 600px) and (max-height: 799px) {
+  .chatCard_container {
     height: 80vh;
   }
 }
-@media (min-width: 1280px) {
+@media (min-height: 800px) /* and (max-height: 999px) */ {
+  .chatCard_container {
+    height: 84vh;
+  }
+}
+/* @media (min-height: 1000px) and (max-height: 1282px) {
+  .chatCard_container {
+    height: 80vh;
+    border: 1px solid red;
+  }
+}
+@media (min-height: 1283px) and (max-height: 1599px) {
+  .chatCard_container {
+    height: 80vh;
+    border: 1px solid red;
+  }
+} */
+
+@media (min-width: 1281px) {
   .chat_container {
-    height: 74vh;
+    height: 70vh;
   }
 }
 @media (min-width: 1281px) {
   .chat_container {
-    height: 68vh;
+    height: 72vh;
   }
 }
 @media (min-width: 1280px) {
@@ -322,7 +357,7 @@
 /*-------------------------------------------------------------------------*/
 
 /* -------------------------- Data Base Section -------------------------- */
-@media (min-width: 1280px) {
+@media (max-width: 1280px) {
   .DB_container {
     height: 77vh;
   }

@@ -54,6 +54,7 @@
   border-radius: 6px;
   background-color: #696969;
   width: 100%;
+  min-width: -webkit-fill-available;
   height: 100%;
   position: relative;
   overflow: hidden;
@@ -65,6 +66,7 @@
   border-radius: 6px;
   background-color: #0b1115;
   width: 100%;
+  min-width: -webkit-fill-available;
   height: 100%;
   position: relative;
   overflow: hidden;

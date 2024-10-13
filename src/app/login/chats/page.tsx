@@ -1,5 +1,5 @@
 import { AsideContainer } from "./AsideContainer";
-import AsideSearch from "./AsideSearch";
+import ChatSearch from "./ChatSearch";
 import CardsContainer from "./CardsContainer";
 import { ChatContainer } from "./ChatContainer";
 import ChatInputText from "./chatUserView/ChatInputText";
@@ -10,7 +10,7 @@ function page(): JSX.Element {
   return (
     <>
       <AsideContainer>
-        <AsideSearch />
+        <ChatSearch />
         <CardsContainer />
       </AsideContainer>
       <ChatContainer>

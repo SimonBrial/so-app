@@ -13,7 +13,6 @@ import { useEffect, useState } from "react";
 import classes from "@/styles/list-styles.module.css";
 import heightClasses from "@/styles/height-view.module.css";
 import PaginationLayout from "./layout/PaginationLayout";
-// import HeaderRowItem from "./HeaderRowItem";
 import BtnDelete from "@/components/buttons/BtnDelete";
 import BtnSee from "@/components/buttons/BtnSee";
 import UserDeleteLayout from "./layout/UserDeleteLayout";
@@ -141,7 +140,7 @@ export default function ListDataBase(): JSX.Element {
   return (
     <Stack gap={10} mt={-8}>
       <ScrollArea
-        w={"90vw"}
+        w={"100%"}
         className={heightClasses.DB_container}
         offsetScrollbars
         scrollbarSize={2}

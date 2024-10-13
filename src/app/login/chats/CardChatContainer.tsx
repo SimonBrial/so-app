@@ -15,7 +15,7 @@ import { socialRedColor } from "@/utils/socialRedColor";
 import { CardChatContainerProps } from "@/interface/interface";
 import { IoChevronDownOutline } from "@/icons";
 
-export const CardChatContainer = ({
+export const  CardChatContainer = ({
   header,
 }: CardChatContainerProps): JSX.Element => {
   const [opened, { toggle }] = useDisclosure(false);
@@ -23,7 +23,7 @@ export const CardChatContainer = ({
 
   // console.log("From CardChatContainer : ", socialRedColor(header));
   return (
-    <Box maw={400} mx="auto" style={{ marginTop: "0.4rem" }}>
+    <Box /* maw={400} */ mx="auto" style={{ marginTop: "0.4rem", width: "100%" }}>
       <Group justify="center" mb={5}>
         <Button
           onClick={toggle}

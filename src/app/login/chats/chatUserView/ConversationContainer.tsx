@@ -1,6 +1,7 @@
 "use client";
 
 import backgroundImage from "../../../../../public/backgroundChat.png";
+
 import Image from "next/image";
 import {
   useMantineColorScheme,
@@ -16,13 +17,9 @@ import heightClasses from "@/styles/height-view.module.css";
 export default function ConversationContainer(): JSX.Element {
   const { colorScheme } = useMantineColorScheme();
   return (
-    <InsideContainer
-      offset={222}
-      withBackground={false}
-      withBorder={false}
-      key={crypto.randomUUID()}
-    >
+    <InsideContainer withBackground={false} withBorder={false} offset={222}>
       <Container
+        style={{ boroder: "1px solid red"}}
         classNames={{
           root:
             colorScheme === "light"
@@ -31,10 +28,10 @@ export default function ConversationContainer(): JSX.Element {
         }}
       >
         <Image
-          alt="Mountains"
+          alt="chat's background"
           src={backgroundImage}
-          sizes="80vw"
-          width={600}
+          // sizes="80vw"
+          width={800}
           height={500}
           // Make the image display full width
           style={{

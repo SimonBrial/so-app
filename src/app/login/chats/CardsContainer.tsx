@@ -9,6 +9,7 @@ export default function CardsContainer(): JSX.Element {
       scrollbarSize={2}
       offsetScrollbars
       scrollHideDelay={100}
+      style={{ width: "100%" }}
     >
       <CardChatContainer header="whatsapp" key={crypto.randomUUID()} />
       <CardChatContainer header="instagram" key={crypto.randomUUID()} />
