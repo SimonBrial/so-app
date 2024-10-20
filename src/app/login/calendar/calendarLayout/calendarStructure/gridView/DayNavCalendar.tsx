@@ -17,19 +17,19 @@ import { months } from "@/data/calendarDaysAndMonth";
 import { useCalendarStore } from "@/store/calendar-store";
 import { CountIndicator } from "@/components/CountIndicator";
 import BtnAdd from "@/components/buttons/BtnAdd";
-import CalendarNewEventLayout from "../../../layout/CalendarNewEventLayout";
 import { BtnReportGenerate } from "@/components/buttons/BtnReportGenerate";
+import CreateNewEventLayout from "../../../layout/CreateNewEventLayout";
 
 export default function DayNavCalendar() {
   const { colorScheme } = useMantineColorScheme();
   const {
+    fnShowCreateEventLayout,
+    showCreateEventLayout,
     currentMonth,
     currentYear,
     fnNextMonth,
     fnPrevMonth,
     eventsArray,
-    fnShowCreateEventLayout,
-    showCreateEventLayout,
   } = useCalendarStore();
   return (
     <Container style={{ maxWidth: "100%", width: "100%", padding: "0" }}>
@@ -110,7 +110,7 @@ export default function DayNavCalendar() {
                 fnShow={() => fnShowCreateEventLayout(showCreateEventLayout)}
                 showDrawer={showCreateEventLayout}
               >
-                <CalendarNewEventLayout />
+                <CreateNewEventLayout />
               </BtnAdd>
             </Box>
           </Flex>

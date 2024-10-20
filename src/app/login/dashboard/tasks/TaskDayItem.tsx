@@ -17,7 +17,7 @@ import { BtnTaskAction } from "./BtnTaskAction";
 import { TaskDayCardProps } from "@/interface/interface";
 
 export const TaskDayItem = ({
-  userToassign,
+  userToAssign,
   description,
   degree,
   admin,
@@ -78,7 +78,7 @@ export const TaskDayItem = ({
                       paddingLeft: "0.7rem",
                     }}
                   >
-                    {userToassign}
+                    {userToAssign}
                   </Title>
                   {admin ? (
                     <Text

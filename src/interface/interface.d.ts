@@ -262,7 +262,7 @@ interface NotitifacionProps {
 }
 
 interface EventCardProps {
-  userToassign: string;
+  userToAssign: string;
   description: string;
   degree: degreeType;
   cardSize: cardSize;
@@ -275,7 +275,7 @@ interface EventCardData {
   title: string;
   desription: string;
   degree: degreeType;
-  userToassign: string;
+  userToAssign: string;
   id: string;
 }
 
@@ -328,14 +328,14 @@ interface EventsArray {
   title: string;
   degree: degreeType;
   description: string;
-  userToassign: string;
+  userToAssign: string;
 }
 
 /* interface EventCardProps {
   title: string;
   desription: string;
   degree: degreeType;
-  userToassign: string;
+  userToAssign: string;
 } */
 
 interface SmallEventCardProps {
@@ -422,7 +422,7 @@ interface TaskDayCardProps {
   title: string;
   description: string;
   degree: degreeType;
-  userToassign: string;
+  userToAssign: string;
   admin: boolean;
 }
 

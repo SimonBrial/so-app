@@ -2,7 +2,7 @@
 
 import React from "react";
 import classes from "@/styles/calendar.module.css";
-import {  Divider, Flex, Title, Drawer } from "@mantine/core";
+import { Divider, Flex, Title, Drawer } from "@mantine/core";
 import degreeColor from "@/utils/degreeColor";
 import { EventCardProps } from "@/interface/interface";
 import { capitalizeFirstLetter } from "@/utils/capitalizeFirstLetter";
@@ -11,14 +11,10 @@ import DescriptionEventLayout from "../../../layout/DescriptionEventLayout";
 import BtnActionEventSmall from "../../../buttons/BtnActionEventSmall";
 
 export const SmallEventCard = ({
-  userToassign,
-  description,
-  cardSize,
-  degree,
-  title,
-  date,
-  id,
-}: EventCardProps) => {
+  smallCardData,
+}: {
+  smallCardData: EventCardProps;
+}) => {
   const [opened, { open, close }] = useDisclosure(false);
   return (
     <>
@@ -29,16 +25,7 @@ export const SmallEventCard = ({
         closeOnClickOutside
         position="right"
       >
-        <DescriptionEventLayout
-          userToassign={userToassign}
-          description={description}
-          cardSize={cardSize}
-          degree={degree}
-          close={close}
-          title={title}
-          date={date}
-          id={id}
-        />
+        <DescriptionEventLayout descriptionObj={smallCardData} close={close} />
         {/* <Text>{dayjs(date).format("DD/MM/YYYY - hh: mm A")}</Text> */}
       </Drawer>
       <Flex
@@ -46,22 +33,22 @@ export const SmallEventCard = ({
           root: classes.eventCard_sm,
         }}
         justify={"space-between"}
-        style={{ backgroundColor: degreeColor(degree)[1] }}
+        style={{ backgroundColor: degreeColor(smallCardData.degree)[1] }}
       >
         <Flex gap={4} align={"center"} onClick={open} style={{ width: "100%" }}>
           <Divider
             orientation="vertical"
             size={"lg"}
             style={{ borderRadius: "10px" }}
-            color={degreeColor(degree)[0]}
+            color={degreeColor(smallCardData.degree)[0]}
           />
           <Title order={6}>
-            {title.length > 18
-              ? capitalizeFirstLetter(title.slice(0, 18)) + "..."
-              : capitalizeFirstLetter(title)}
+            {smallCardData.title.length > 18
+              ? capitalizeFirstLetter(smallCardData.title.slice(0, 18)) + "..."
+              : capitalizeFirstLetter(smallCardData.title)}
           </Title>
         </Flex>
-        <BtnActionEventSmall eventId={id} />
+        <BtnActionEventSmall eventId={smallCardData.id} />
       </Flex>
     </>
   );

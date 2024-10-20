@@ -6,7 +6,7 @@ export const CalendarContainer = ({
   children: React.ReactNode;
 }): JSX.Element => {
   return (
-    <InsideContainer offset={115} withBackground={false} withBorder={false} key={crypto.randomUUID()}>
+    <InsideContainer offset={70} withBackground={false} withBorder={false}>
       {children}
     </InsideContainer>
   );

@@ -3,19 +3,32 @@ import { EventsArray } from "@/interface/interface";
 import { areDateOnSameDay, getDateObjet } from "@/utils/calendarFunctions";
 import { create } from "zustand";
 
+/* const initialEvent: EventsArray = {
+  date: new Date(),
+  degree: "Importante",
+  description: "",
+  id: crypto.randomUUID(),
+  title: "",
+  userToAssign: "",
+}; */
+
 interface CalendarStoreProps {
   showCreateEventLayout: boolean;
   currentYear: number;
   currentMonth: number;
   currentDay: number;
   eventsArray: EventsArray[];
-  eventsToDelete: EventsArray | string;
+  eventToDelete: EventsArray | string;
+  eventToEdit: EventsArray | string;
   fnShowCreateEventLayout: (stateValue: boolean) => void;
   fnPrevMonth: () => void;
   fnNextMonth: () => void;
   fnEventListGenerator: (date: Date) => EventsArray[];
   fnIsDateInCurrentMonth: (day: number, month: number, year: number) => boolean;
   fnCreateEvent: (eventToCreate: EventsArray) => Promise<void>;
+  fnUpdateEvent: (eventId: string, eventData: EventsArray) => Promise<void>;
+  fnGetEventById: (eventId: string) => Promise<EventsArray | undefined>;
+  // fnEvent: (eventToCreate: EventsArray) => Promise<void>;
   fnDeleteEvent: (eventId: string) => Promise<void>;
   fnGetEventToDelete: (eventId: string) => EventsArray | string;
   setCurrentMonth: (currentMonth: number) => void;
@@ -30,7 +43,8 @@ export const useCalendarStore = create<CalendarStoreProps>()((set, get) => {
   return {
     // Data
     eventsArray: MOCKEVENTS,
-    eventsToDelete: "",
+    eventToDelete: "",
+    eventToEdit: "",
     showCreateEventLayout: false,
     sameDay: false,
     onCurrentMonth: false,
@@ -125,6 +139,40 @@ export const useCalendarStore = create<CalendarStoreProps>()((set, get) => {
         console.log(err);
       }
     },
+    fnUpdateEvent: async (eventId, eventData) => {
+      const { eventsArray } = get();
+      /* console.log("eventData: ", eventData);
+      console.log("Before to update the event --> eventsArray: ", eventsArray); */
+      try {
+        const eventIndex = eventsArray.findIndex(
+          (event) => event.id === eventId,
+        );
+        if (eventIndex !== -1) {
+          // Creating a copy of the currently data and updating the specified data
+          const updateEvent = [...eventsArray];
+          /* updateEvent[eventIndex] = {
+            ...updateEvent[eventIndex],
+            ...eventData,
+          }; */
+          updateEvent[eventIndex] = {
+            date: eventData.date,
+            degree: eventData.degree,
+            description: eventData.description,
+            id: eventId,
+            title: eventData.title,
+            userToAssign: eventData.userToAssign,
+          };
+          await set({ eventsArray: updateEvent });
+          /* console.log(
+            "After to update the event --> eventsArray: ",
+            updateEvent,
+          ); */
+        }
+      } catch (err) {
+        console.log(err);
+        set({ eventsArray: eventsArray });
+      }
+    },
     fnGetEventToDelete: (eventId) => {
       // TODO: This function must be asynchronous becasue, the app make a request to server to search wich event going to be deleted
       const { eventsArray } = get();
@@ -133,6 +181,29 @@ export const useCalendarStore = create<CalendarStoreProps>()((set, get) => {
         return eventFound;
       }
       return "Evento no encontrado!";
+    },
+    fnGetEventById: async (eventId) => {
+      try {
+        const { eventsArray } = get();
+        const eventIndex = eventsArray.findIndex(
+          (event) => event.id === eventId,
+        );
+        if (eventIndex !== -1) {
+          const { date, degree, description, id, title, userToAssign } =
+            eventsArray[eventIndex];
+          return {
+            userToAssign,
+            description,
+            degree,
+            title,
+            date,
+            id,
+          };
+        }
+        return;
+      } catch (err) {
+        console.log(err);
+      }
     },
   };
 });

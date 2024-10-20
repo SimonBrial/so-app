@@ -6,19 +6,14 @@ import classes from "@/styles/calendar.module.css";
 import DayNavCalendar from "./gridView/DayNavCalendar";
 import DatesContainer from "./gridView/DatesContainer";
 
-// TODO: Agregar la opcion para añadir eventos. ✅
-// TODO: Ajustar los dias del mes, que no se muevan. ✅
-// TODO: Refactorizar todo el codigo. ✅
-
 export default function CalendarContainer() {
   return (
-    <InsideContainer
-      withBackground
-      withBorder={false}
-      offset={50}
-    >
-      <Container className={classes.calendarContainer}>
-        <Stack style={{ width: "100%" }}>
+    <InsideContainer withBackground={false} withBorder={false} offset={0}>
+      <Container
+        className={classes.calendarContainer}
+        // style={{ backgroundColor: "red", border: "1px solid red" }}
+      >
+        <Stack style={{ width: "100%", height: "100%" }}>
           <DayNavCalendar />
           <DatesContainer />
         </Stack>

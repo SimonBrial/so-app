@@ -4,6 +4,7 @@ import { useMantineColorScheme, Container, Stack } from "@mantine/core";
 import classes from "@/styles/calendar.module.css";
 import { SmallEventCard } from "../cards/SmallEventCard";
 import { useCalendarStore } from "@/store/calendar-store";
+import { EventCardProps } from "@/interface/interface";
 
 export default function EventsContainer({ eventDay }: { eventDay: Date }) {
   const { colorScheme } = useMantineColorScheme();
@@ -27,21 +28,18 @@ export default function EventsContainer({ eventDay }: { eventDay: Date }) {
         className={classes.dayEvents}
       >
         {fnEventListGenerator(eventDay).map((event) => {
-          const { date, degree, description, id, title, userToassign } = event;
+          const eventData: EventCardProps = {
+            userToAssign: event.userToAssign,
+            description: event.description,
+            degree: event.degree,
+            title: event.title,
+            cardSize: "small",
+            date: event.date,
+            id: event.id,
+          };
 
           // console.log(event)
-          return (
-            <SmallEventCard
-              userToassign={userToassign}
-              description={description}
-              cardSize="small"
-              degree={degree}
-              title={title}
-              key={id}
-              date={date}
-              id={id}
-            />
-          );
+          return <SmallEventCard smallCardData={eventData} key={event.id} />;
         })}
       </Stack>
     </Container>
@@ -53,7 +51,7 @@ export default function EventsContainer({ eventDay }: { eventDay: Date }) {
     eventsArray: EventsArray[],
   ): (React.JSX.Element | undefined)[] => {
     return eventsArray.map((event, index) => {
-      const { date, title, degree, description, id, userToassign } = event;
+      const { date, title, degree, description, id, userToAssign } = event;
       if (day === date.getDate()) {
         return (
           <div key={index} className="StyledEvent">
@@ -62,7 +60,7 @@ export default function EventsContainer({ eventDay }: { eventDay: Date }) {
               event.date,
             ) && (
               <SmallEventCard
-                userToassign={userToassign}
+                userToAssign={userToAssign}
                 description={description}
                 cardSize="small"
                 degree={degree}

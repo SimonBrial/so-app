@@ -28,11 +28,11 @@ export default function EventListLayout({ close, day }: EventListLayoutProps) {
         <ScrollArea h={500} scrollbarSize={2} offsetScrollbars>
           <Stack gap={6}>
           {fnEventListGenerator(day).map((event) => {
-            const { date, degree, description, id, title, userToassign } =
+            const { date, degree, description, id, title, userToAssign } =
               event;
             return (
               <EventCardLayout
-                userToassign={userToassign}
+                userToAssign={userToAssign}
                 description={description}
                 degree={degree}
                 cardSize="big"

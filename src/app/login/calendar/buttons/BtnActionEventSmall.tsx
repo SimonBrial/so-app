@@ -1,38 +1,39 @@
 "use client";
 
 import {
-  HiOutlineCheck,
   HiOutlineDotsVertical,
   HiOutlinePencil,
-  HiOutlineSave,
+  HiOutlineCheck,
   HiOutlineTrash,
   IoClose,
 } from "@/icons";
 import {
-  Menu,
-  Center,
-  Text,
-  Flex,
   useMantineColorScheme,
-  Modal,
-  Stack,
+  Center,
+  Drawer,
   Button,
   Portal,
-  Drawer,
+  Modal,
+  Stack,
+  Text,
+  Flex,
+  Menu,
 } from "@mantine/core";
 import btnClasses from "@/styles/btn-styles.module.css";
 import { useDisclosure } from "@mantine/hooks";
-import { useState } from "react";
 import classes from "@/styles/btn-styles.module.css";
 import { notifications } from "@mantine/notifications";
 import DeleteEventLayout from "../layout/DeleteEventLayout";
 import { useCalendarStore } from "@/store/calendar-store";
+import EditCalendarEventLayout from "../layout/EditCalendarEventLayout";
+import { useState } from "react";
 
 export default function BtnActionEventSmall({ eventId }: { eventId: string }) {
   const { colorScheme } = useMantineColorScheme();
   const [opened, { open, close }] = useDisclosure(false);
   const [showDrawer, setShowDrawer] = useState<boolean>(false);
-  const { fnDeleteEvent } = useCalendarStore();
+  const { fnDeleteEvent } =
+    useCalendarStore();
 
   const deleteEvent = async () => {
     try {
@@ -119,10 +120,10 @@ export default function BtnActionEventSmall({ eventId }: { eventId: string }) {
               // border: "1px solid red",
             }}
           >
-            prueba
-            <Flex align={"center"} gap={"sm"} style={{ height: "2.25rem" }}>
+            <EditCalendarEventLayout fnSetShowDrawner={setShowDrawer} eventId={eventId} />
+            {/* <Flex align={"center"} gap={"sm"} style={{ height: "2.25rem" }}>
               <Button
-                onClick={() => setShowDrawer(false)}
+                onClick={() => fnShowEditEventLayout(false)}
                 fullWidth
                 variant="white"
                 leftSection={<IoClose />}
@@ -164,7 +165,7 @@ export default function BtnActionEventSmall({ eventId }: { eventId: string }) {
               >
                 Guardar
               </Button>
-            </Flex>
+            </Flex> */}
           </Stack>
         </Drawer>
       </Portal>
@@ -185,7 +186,7 @@ export default function BtnActionEventSmall({ eventId }: { eventId: string }) {
         <Menu.Dropdown>
           <Menu.Item
             color="#F06418"
-            onClick={() => setShowDrawer((drawer) => !drawer)}
+            onClick={() => setShowDrawer(true)}
           >
             <Flex gap={6}>
               <Center style={{ fontSize: "1.2rem" }}>

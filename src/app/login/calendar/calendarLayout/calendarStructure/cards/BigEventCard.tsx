@@ -21,12 +21,12 @@ interface BigEventCardProps {
   title: string;
   description: string;
   degree: degreeType;
-  userToassign: string;
+  userToAssign: string;
   admin: boolean;
 }
 
 export const BigEventCard = ({
-  userToassign,
+  userToAssign,
   description,
   degree,
   title,
@@ -77,7 +77,7 @@ export const BigEventCard = ({
                     paddingLeft: "0.7rem",
                   }}
                 >
-                  {userToassign}
+                  {userToAssign}
                 </Title>
                 {admin ? (
                   <Title

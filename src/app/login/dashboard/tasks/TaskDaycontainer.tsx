@@ -60,7 +60,7 @@ export default function TaskDaycontainer({
             <>
               {taskToday.map((task) => {
                 const {
-                  userToassign,
+                  userToAssign,
                   description,
                   degree,
                   idTask,
@@ -69,7 +69,7 @@ export default function TaskDaycontainer({
                 } = task;
                 return (
                   <TaskDayItem
-                    userToassign={userToassign}
+                    userToAssign={userToAssign}
                     description={description}
                     idTask={idTask}
                     degree={degree}

@@ -402,7 +402,7 @@ const taskTodayFake: TaskDayCardProps[] = [
     degree: "Muy Importante",
     description: "Prueba",
     title: "Prueba Prueba Prueba Prueba Prueba",
-    userToassign: "Mario Hurtado",
+    userToAssign: "Mario Hurtado",
   },
   {
     idTask: crypto.randomUUID(),
@@ -410,7 +410,7 @@ const taskTodayFake: TaskDayCardProps[] = [
     degree: "Importante",
     description: "Prueba",
     title: "Prueba 1 Prueba 1 Prueba 1 Prueba 1 Prueba 1",
-    userToassign: "Mario Hurtado",
+    userToAssign: "Mario Hurtado",
   },
   {
     idTask: crypto.randomUUID(),
@@ -418,7 +418,7 @@ const taskTodayFake: TaskDayCardProps[] = [
     degree: "Normal",
     description: "Prueba",
     title: "Prueba 2 Prueba 2 Prueba 2 Prueba 2 Prueba 2",
-    userToassign: "Mario Hurtado",
+    userToAssign: "Mario Hurtado",
   },
   {
     idTask: crypto.randomUUID(),
@@ -426,7 +426,7 @@ const taskTodayFake: TaskDayCardProps[] = [
     degree: "Normal",
     description: "Prueba",
     title: "Prueba 3 Prueba 3 Prueba 3 Prueba 3 Prueba 3",
-    userToassign: "Mario Hurtado",
+    userToAssign: "Mario Hurtado",
   },
   {
     idTask: crypto.randomUUID(),
@@ -434,7 +434,7 @@ const taskTodayFake: TaskDayCardProps[] = [
     degree: "Poco Importante",
     description: "Prueba",
     title: "Prueba 4 Prueba 4 Prueba 4 Prueba 4 Prueba 4",
-    userToassign: "Mario Hurtado",
+    userToAssign: "Mario Hurtado",
   },
 ];
 

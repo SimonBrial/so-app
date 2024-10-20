@@ -177,11 +177,11 @@
 
 @media (max-width: 1280px) {
   .calendarContainer {
-    height: 740px;
+    height: 92vh;
   }
 }
 @media (min-width: 1281px) {
   .calendarContainer {
-    height: 850px;
+    height: 92vh;
   }
 }

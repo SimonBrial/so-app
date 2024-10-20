@@ -8,17 +8,14 @@ import { EventCardProps } from "@/interface/interface";
 import { Button, Flex, Stack, Text, Title } from "@mantine/core";
 import dayjs from "dayjs";
 
-interface DescriptionEventLayoutProps extends EventCardProps {
+interface DescriptionEventLayoutProps {
+  descriptionObj: EventCardProps;
   close: () => void;
 }
 
 export default function DescriptionEventLayout({
-  userToassign,
-  description,
-  degree,
-  title,
+  descriptionObj,
   close,
-  date,
 }: DescriptionEventLayoutProps) {
   return (
     <Stack
@@ -33,28 +30,28 @@ export default function DescriptionEventLayout({
         <TitleSimpleLayout title="Descripcion del Evento" />
         <Flex justify={"space-between"} align={"center"} gap={8}>
           <Title order={4}>Titulo</Title>
-          <Title order={4}>{title}</Title>
+          <Title order={4}>{descriptionObj.title}</Title>
         </Flex>
         <GeneralDivider orientation="horizontal" />
         <Flex justify={"space-between"} align={"center"}>
           <Title order={4}>Prioridad</Title>
-          <PriorityBadge title={degree} />
+          <PriorityBadge title={descriptionObj.degree} />
         </Flex>
         <GeneralDivider orientation="horizontal" />
         <Flex justify={"space-between"} align={"center"}>
           <Title order={4}>Fecha</Title>
-          <Title order={4}>{dayjs(date).format("DD/MM/YYYY - hh: mm A")}</Title>
+          <Title order={4}>{dayjs(descriptionObj.date).format("DD/MM/YYYY - hh: mm A")}</Title>
         </Flex>
         <GeneralDivider orientation="horizontal" />
         <Flex justify={"space-between"} align={"center"}>
           <Title order={4}>Asignado a</Title>
-          <Title order={4}>{userToassign}</Title>
+          <Title order={4}>{descriptionObj.userToAssign}</Title>
         </Flex>
         <GeneralDivider orientation="horizontal" />
 
         <Title order={4}>Descripcion</Title>
         <GeneralDivider orientation="horizontal" />
-        <Text px={10}>{description}</Text>
+        <Text px={10}>{descriptionObj.description}</Text>
       </Stack>
       <Button
           onClick={close}

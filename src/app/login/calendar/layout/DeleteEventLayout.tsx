@@ -21,7 +21,7 @@ export default function DeleteEventLayout({
   eventToDeleteId: string;
 }) {
   const { colorScheme } = useMantineColorScheme();
-  const { eventsToDelete, fnGetEventToDelete } = useCalendarStore();
+  const { eventToDelete, fnGetEventToDelete } = useCalendarStore();
   const [eventSelected, setEventSelected] = useState<EventsArray>();
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function DeleteEventLayout({
     if (eventFound !== undefined && typeof eventFound !== "string") {
       setEventSelected(eventFound);
     }
-  }, [eventsToDelete]);
+  }, [eventToDelete]);
   /* console.log(eventsToDelete)
   console.log(eventToDeleteId);
   console.log(eventSelected); */
@@ -162,7 +162,7 @@ export default function DeleteEventLayout({
                     },
                   })}
                 >
-                  {eventSelected.userToassign}
+                  {eventSelected.userToAssign}
                 </Text>
               </Flex>
               <GeneralDivider orientation="horizontal" />
@@ -193,7 +193,7 @@ export default function DeleteEventLayout({
                     },
                   })}
                 >
-                  {eventSelected.userToassign}
+                  {eventSelected.userToAssign}
                 </Text>
               </Flex>
               <GeneralDivider

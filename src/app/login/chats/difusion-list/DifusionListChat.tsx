@@ -28,7 +28,6 @@ export const DifusionListChat = (): JSX.Element => {
         allWhite
         width="100%"
         withBorder
-        key={crypto.randomUUID()}
       >
         <ScrollArea
           scrollbarSize={2}

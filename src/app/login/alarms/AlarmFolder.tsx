@@ -32,39 +32,9 @@ export default function AlarmFolder({
   function cardItems(): JSX.Element[] {
     if (alarmsArray.length > 0) {
       return alarmsArray.map((item: AlarmObj) => {
-        const {
-          folderAssigned,
-          privateAlarm,
-          description,
-          privateUser,
-          alarmTitle,
-          folderIcon,
-          createdTo,
-          automated,
-          createAt,
-          toDate,
-          color,
-          icon,
-          id,
-        } = item;
         return (
           <Grid.Col key={item.id} span={4}>
-            <AlarmCard
-              folderAssigned={folderAssigned}
-              privateAlarm={privateAlarm}
-              privateUser={privateUser}
-              description={description}
-              themeColor={themeColor}
-              alarmTitle={alarmTitle}
-              folderIcon={folderIcon}
-              automated={automated}
-              createdTo={createdTo}
-              createAt={createAt}
-              toDate={toDate}
-              color={color}
-              icon={icon}
-              id={id}
-            />
+            <AlarmCard themeColor={themeColor} alarmObj={item} />
           </Grid.Col>
         );
       });
@@ -80,9 +50,10 @@ export default function AlarmFolder({
         border: `2px solid ${themeColor}`,
         borderRadius: "6px",
         backgroundColor: `${themeColor}33`,
+        maxWidth: "100%",
       }}
     >
-      <Stack pb={5}>
+      <Stack pb={5} style={{ width: "100%" }}>
         <Flex
           align={"center"}
           justify={"space-between"}
@@ -140,13 +111,13 @@ export default function AlarmFolder({
         <Text
           size="sm"
           mah={10}
-          styles={({
+          styles={{
             root: {
               color: `${themeColor}`,
               marginTop: "-0.8rem",
               cursor: "default",
             },
-          })}
+          }}
         >
           {description.length > 100
             ? description.slice(0, 100).trim().concat("...")

@@ -20,11 +20,11 @@ interface EventCardProps {
   title: string;
   description: string;
   degree: degreeType;
-  userToassign: string;
+  userToAssign: string;
 }
 
 export const EventCard = ({
-  userToassign,
+  userToAssign,
   description,
   degree,
   title,
@@ -88,7 +88,7 @@ export const EventCard = ({
           <Stack gap={2} mb={5}>
             <Flex align={"center"} gap={6}>
               <Title order={5}>Asignado a: </Title>
-              <Text>{userToassign}</Text>
+              <Text>{userToAssign}</Text>
             </Flex>
             <Divider color={degreeColor(degree)[0]} />
           </Stack>

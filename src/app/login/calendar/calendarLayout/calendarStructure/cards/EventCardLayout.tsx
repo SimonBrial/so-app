@@ -4,7 +4,7 @@ import { EventCard } from "./EventCard";
 import { BigEventCard } from "./BigEventCard";
 
 export const EventCardLayout = ({
-  userToassign,
+  userToAssign,
   description,
   cardSize,
   degree,
@@ -15,7 +15,7 @@ export const EventCardLayout = ({
   if (cardSize === "small") {
     return (
       <SmallEventCard
-        userToassign={userToassign}
+        userToAssign={userToAssign}
         description={description}
         cardSize={cardSize}
         degree={degree}
@@ -29,7 +29,7 @@ export const EventCardLayout = ({
   if (cardSize === "medium") {
     return (
       <EventCard
-        userToassign={userToassign}
+        userToAssign={userToAssign}
         description={description}
         degree={degree}
         title={title}
@@ -41,7 +41,7 @@ export const EventCardLayout = ({
     return (
       <BigEventCard
         admin
-        userToassign={userToassign}
+        userToAssign={userToAssign}
         description={description}
         degree={degree}
         title={title}

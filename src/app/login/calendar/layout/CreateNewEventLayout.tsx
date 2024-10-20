@@ -2,13 +2,13 @@
 
 import { GeneralDivider } from "@/components/GeneralDivider";
 import HorizontalInputLayout from "@/components/inputs/HorizontalInputLayout";
-import { HiOutlineCalendar, IoClose, MdOutlineTitle } from "@/icons";
+import { LuCalendarPlus, IoClose, MdOutlineTitle } from "@/icons";
 import {
   useMantineColorScheme,
+  Button,
   Stack,
   Title,
   Flex,
-  Button,
 } from "@mantine/core";
 import { useCalendarStore } from "@/store/calendar-store";
 import classesBtn from "@/styles/btn-styles.module.css";
@@ -23,7 +23,7 @@ import TextAreaInput from "@/components/inputs/TextAreaInput";
 import RememberWarning from "@/components/RememberWarning";
 import { notifications } from "@mantine/notifications";
 import { EventsArray } from "@/interface/interface";
-import React from "react";
+import SelectInput from "@/components/inputs/SelectInput";
 
 interface ICalendarNewEventLayoutProps {
   id: string;
@@ -32,7 +32,7 @@ interface ICalendarNewEventLayoutProps {
   priority: degreeType;
   date: Date;
   // If the user is SUPER ADMIN, add the input to assign to an user
-  // userToassign: string;
+  userToAssign: string;
 }
 
 const initialValues: ICalendarNewEventLayoutProps = {
@@ -41,19 +41,19 @@ const initialValues: ICalendarNewEventLayoutProps = {
   description: "",
   priority: "Muy Importante",
   date: new Date(),
-  // userToassign: "",
+  userToAssign: "",
 };
 
-export default function CalendarNewEventLayout() {
+export default function CreateNewEventLayout() {
   const { colorScheme } = useMantineColorScheme();
   const {
     fnShowCreateEventLayout,
     showCreateEventLayout,
     fnCreateEvent,
-    eventsArray,
+    // eventsArray,
   } = useCalendarStore();
 
-  console.log("eventsArray: ", eventsArray);
+  // console.log("eventsArray: ", eventsArray);
 
   const {
     formState: { errors },
@@ -71,15 +71,16 @@ export default function CalendarNewEventLayout() {
     try {
       if (data !== undefined) {
         console.log(data);
-        const { date, description, priority, title } = data;
+
+        const { date, description, priority, title, id, userToAssign } = data;
 
         const eventToCreate: EventsArray = {
-          date: date,
-          degree: priority,
+          userToAssign: userToAssign,
           description: description,
-          id: crypto.randomUUID(),
+          degree: priority,
           title: title,
-          userToassign: "Simon Briceño",
+          date: date,
+          id: id,
         };
 
         await fnCreateEvent(eventToCreate);
@@ -101,6 +102,8 @@ export default function CalendarNewEventLayout() {
   };
   /* const p = watch("priority");
     console.log(p) */
+  console.log("errors: ", errors);
+  console.log("control: ", control);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} style={{ height: "100%" }}>
@@ -133,6 +136,16 @@ export default function CalendarNewEventLayout() {
             max={20}
             required
             min={3}
+          />
+          <SelectInput
+            errorDescription={errors.userToAssign?.message}
+            control={control}
+            inputSize="200px"
+            label="userToAssign"
+            asterisk
+            dataArr={["Simon Briceño", "Mario Hurtado"]} // TODO: This array must be dynamic because the number of admins can vary
+            searchable
+            title="Asignar a"
           />
           <StatusSelect
             errorDescription={errors.priority?.message}
@@ -177,8 +190,8 @@ export default function CalendarNewEventLayout() {
           </Stack>
         </Stack>
         <Stack>
-          Falta: de ser super admin, puede asignar nuevos eventos, caso
-          contrario no
+          {/* Falta: de ser super admin, puede asignar nuevos eventos, caso
+          contrario no */}
           <RememberWarning />
           <Flex align={"center"} gap={"sm"} style={{ height: "2.25rem" }}>
             <Button
@@ -203,7 +216,7 @@ export default function CalendarNewEventLayout() {
               type="submit"
               fullWidth
               variant="filled"
-              leftSection={<HiOutlineCalendar />}
+              leftSection={<LuCalendarPlus />}
               classNames={{
                 root:
                   colorScheme === "light"
@@ -227,7 +240,7 @@ export default function CalendarNewEventLayout() {
                 }
               }}
             >
-              Crear Alarma
+              Crear Evento
             </Button>
           </Flex>
         </Stack>
