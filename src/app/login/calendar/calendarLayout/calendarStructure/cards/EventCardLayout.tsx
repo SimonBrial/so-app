@@ -15,13 +15,15 @@ export const EventCardLayout = ({
   if (cardSize === "small") {
     return (
       <SmallEventCard
-        userToAssign={userToAssign}
-        description={description}
-        cardSize={cardSize}
-        degree={degree}
-        title={title}
-        date={date}
-        id={id}
+        smallCardData={{
+          userToAssign,
+          description,
+          cardSize,
+          degree,
+          title,
+          date,
+          id,
+        }}
       />
     );
   }
