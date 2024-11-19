@@ -9,7 +9,6 @@ export default function AlarmContainer() {
       offset={120}
       withBackground={false}
       withBorder={false}
-      key={crypto.randomUUID()}
     >
       <Flex gap={"sm"} style={{ height: "100%" }}>
         <FolderContainer />

@@ -15,14 +15,14 @@ import heightClasses from "@/styles/height-view.module.css";
 import PaginationLayout from "./layout/PaginationLayout";
 import BtnDelete from "@/components/buttons/BtnDelete";
 import BtnSee from "@/components/buttons/BtnSee";
-import UserDeleteLayout from "./layout/UserDeleteLayout";
-import UserDescriptionLayout from "./layout/UserDescriptionLayout";
+import ReadRegisterLayout from "./layout/ReadRegisterLayout";
 import { useDataBaseStore } from "@/store/db-store";
 import BtnEditUser from "./buttons/BtnEditUser";
 import StatusBadge from "@/components/badge/StatusBadge";
 import dayjs from "dayjs";
 import { capitalizeFirstLetter } from "@/utils/capitalizeFirstLetter";
 import { ListDBProps } from "@/interface/interface";
+import DeleteRegisterLayout from "./layout/DeleteRegisterLayout";
 
 export default function ListDataBase(): JSX.Element {
   // Reading the context from zustand store folder
@@ -60,7 +60,6 @@ export default function ListDataBase(): JSX.Element {
       <Table.Td style={{ paddingRight: "0", width: "2.5rem" }}>
         <Flex gap={6} align={"center"}>
           <BtnDelete
-            key={crypto.randomUUID()}
             description="El registro del usuario ha sido eliminado  de la base de datos satisfactoriamente!"
             labelBtn="Aceptar"
             color="#115dfe"
@@ -68,10 +67,10 @@ export default function ListDataBase(): JSX.Element {
             id={element.id}
             icon
           >
-            <UserDeleteLayout idToDelete={element.id} />
+            <DeleteRegisterLayout idToDelete={element.id} />
           </BtnDelete>
           <BtnSee idToShow={element.id}>
-            <UserDescriptionLayout />
+            <ReadRegisterLayout />
           </BtnSee>
           <BtnEditUser idToEdit={element.id} />
         </Flex>

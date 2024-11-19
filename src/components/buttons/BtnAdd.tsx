@@ -124,7 +124,7 @@ export default function BtnAdd({
               ? classesBtn.btnAdd
               : classesBtn.btnAdd_dark,
         }}
-        key={crypto.randomUUID()}
+         
       >
         {label}
       </Button>

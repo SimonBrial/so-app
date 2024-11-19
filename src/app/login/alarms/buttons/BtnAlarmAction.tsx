@@ -5,8 +5,8 @@ import {
   HiOutlinePencil,
   HiOutlineCheck,
   HiOutlineTrash,
-  IoClose,
   HiOutlineSave,
+  IoClose,
 } from "@/icons";
 import {
   useMantineColorScheme,
@@ -119,7 +119,6 @@ export default function BtnAlarmAction({
           >
             {/* <CreateAlarmLayout
               title="Editar Recordatorio"
-              key={crypto.randomUUID()}
             /> */}
             prueba
             <Flex align={"center"} gap={"sm"} style={{ height: "2.25rem" }}>
@@ -148,9 +147,9 @@ export default function BtnAlarmAction({
                       ? classes.btnAdd
                       : classes.btnAdd_dark,
                 }}
-                styles={({
+                styles={{
                   section: { fontSize: "1.2rem" },
-                })}
+                }}
                 onClick={() => {
                   setShowDrawer(false);
                   notifications.show({

@@ -137,7 +137,7 @@ export default function BtnDelete({
         </Stack>
       </Modal>
 
-      <TooltipLayout label="Borrar" position="top" key={crypto.randomUUID()}>
+      <TooltipLayout label="Borrar" position="top"  >
         <UnstyledButton
           variant="transparent"
           color="gray"

@@ -36,7 +36,7 @@ export default function BtnEditAlarm({ editRef }: { editRef: any }) {
             icon={<HiOutlineSave />}
             title="Guardar"
             close={close}
-            key={crypto.randomUUID()}
+             
           /> */}
         </Stack>
       </Drawer>

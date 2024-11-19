@@ -102,7 +102,7 @@ export default function MailReadView(): JSX.Element {
                       <TooltipLayout
                         label="Responder"
                         position="bottom"
-                        key={crypto.randomUUID()}
+                         
                       >
                         <UnstyledButton
                           classNames={{
@@ -120,7 +120,7 @@ export default function MailReadView(): JSX.Element {
                       <TooltipLayout
                         label="Responder a Todos"
                         position="bottom"
-                        key={crypto.randomUUID()}
+                         
                       >
                         <UnstyledButton
                           classNames={{
@@ -138,7 +138,7 @@ export default function MailReadView(): JSX.Element {
                       <TooltipLayout
                         label="Responder"
                         position="bottom"
-                        key={crypto.randomUUID()}
+                         
                       >
                         <UnstyledButton
                           classNames={{

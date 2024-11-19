@@ -33,7 +33,7 @@ export default function BtnCreateMail() {
         <Stack gap={8}>
           {/* <NewEmailLayout /> */}
           <Flex gap={4}>
-            <BtnCancel fnCancel={close} key={crypto.randomUUID()} />
+            <BtnCancel fnCancel={close}   />
             <BtnSend
               description="El correo ha sido enviado satisfactoriamente!"
               iconTag={<BiMailSend />}
@@ -41,7 +41,7 @@ export default function BtnCreateMail() {
               title="Correo Enviado"
               labelBtn="Enviar Correo"
               close={close}
-              key={crypto.randomUUID()}
+               
             />
           </Flex>
         </Stack>

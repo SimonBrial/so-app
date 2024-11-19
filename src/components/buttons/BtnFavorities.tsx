@@ -103,7 +103,7 @@ export default function BtnFavorities({
       <TooltipLayout
         label={!colorState ? "Agregar a favoritos" : "Eliminar de favoritos"}
         position="bottom"
-        key={crypto.randomUUID()}
+         
       >
         <UnstyledButton
           classNames={{
@@ -149,7 +149,7 @@ export default function BtnFavorities({
       <TooltipLayout
         label={!colorState ? "Agregar a favoritos" : "Eliminar de favoritos"}
         position="bottom"
-        key={crypto.randomUUID()}
+         
       >
         <UnstyledButton
           mb={0}

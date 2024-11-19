@@ -26,10 +26,10 @@ export default function MetricsContainer(): JSX.Element {
                 width: "100%",
               }}
             >
-              <SalesCardContainer key={crypto.randomUUID()} />
-              <SalesCardContainer key={crypto.randomUUID()} />
-              <SalesCardContainer key={crypto.randomUUID()} />
-              <SalesCardContainer key={crypto.randomUUID()} />
+              <SalesCardContainer   />
+              <SalesCardContainer   />
+              <SalesCardContainer   />
+              <SalesCardContainer   />
             </Stack>
           </Grid.Col>
           <Grid.Col span={6}>
@@ -40,10 +40,10 @@ export default function MetricsContainer(): JSX.Element {
                 width: "100%",
               }}
             >
-              <SalesCardContainer key={crypto.randomUUID()} />
-              <SalesCardContainer key={crypto.randomUUID()} />
-              <SalesCardContainer key={crypto.randomUUID()} />
-              <SalesCardContainer key={crypto.randomUUID()} />
+              <SalesCardContainer   />
+              <SalesCardContainer   />
+              <SalesCardContainer   />
+              <SalesCardContainer   />
             </Stack>
           </Grid.Col>
         </Grid>

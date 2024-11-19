@@ -108,7 +108,7 @@ export default function BtnCreateRegister() {
               root:
                 colorScheme === "light" ? classes.btnAdd : classes.btnAdd_dark,
             }}
-            key={crypto.randomUUID()}
+             
           >
             Crear RCV
           </Button>

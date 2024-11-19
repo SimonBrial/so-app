@@ -11,7 +11,7 @@ import { Button, Flex, Stack, useMantineColorScheme } from "@mantine/core";
 import classes from "@/styles/btn-styles.module.css";
 import Link from "next/link";
 
-export function AdminEditLayout() {
+export default function AdminEditLayout() {
   const { colorScheme } = useMantineColorScheme();
   return (
     <ContainerInside withBorder width="70%" allWhite>
@@ -72,7 +72,7 @@ export function AdminEditLayout() {
           </Link>
           <Link href={"/login/settings/admin"} style={{ width: "100%" }}>
             <BtnSave
-              key={crypto.randomUUID()}
+               
               id={crypto.randomUUID()}
               color="green"
               title="Los cambios han sido guardados"

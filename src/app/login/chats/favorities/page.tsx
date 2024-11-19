@@ -23,7 +23,7 @@ const page = (): JSX.Element => {
       <ChatContainer>
         <UserChatHeader colorUser="instagram" status={true} />
         <ConversationContainer />
-        <ChatInputText key={crypto.randomUUID()} />
+        <ChatInputText   />
       </ChatContainer>
     </>
   );

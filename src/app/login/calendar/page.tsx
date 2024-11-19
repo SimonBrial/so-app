@@ -1,10 +1,13 @@
-import { CalendarContainer } from "./CalendarContainer";
-import { CalendarGridView } from "./calendarLayout/CalendarGridView";
+import InsideContainer from "@/components/container/InsideContainer";
+import { CalendarLayout } from "./CalendarLayout";
+import CalendarContainer from "./calendarBody/CalendarContainer";
 
 export default function page(): JSX.Element {
   return (
-    <CalendarContainer>
-      <CalendarGridView />
-    </CalendarContainer>
+    <CalendarLayout>
+      <InsideContainer offset={0} withBackground withBorder={true}>
+        <CalendarContainer />
+      </InsideContainer>
+    </CalendarLayout>
   );
 }

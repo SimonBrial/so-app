@@ -10,7 +10,7 @@ export default function layout({
 }): JSX.Element {
   const mailSections = [
     { value: "Globales", icon: <TbWorld />, dir: "/login/settings" },
-    { value: "Admin", icon: <HiOutlineUser />, dir: "/login/settings/admin" },
+    { value: "Usuario", icon: <HiOutlineUser />, dir: "/login/settings/admin" },
     {
       value: "Super Admin",
       icon: <BiCrown />,

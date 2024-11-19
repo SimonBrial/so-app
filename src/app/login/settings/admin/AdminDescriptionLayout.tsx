@@ -4,7 +4,7 @@ import RegisterInfo from "@/components/RegisterInfo";
 import { Stack } from "@mantine/core";
 import React from "react";
 
-export const AdminDescriptionLayout = () => {
+export default function AdminDescriptionLayout() {
   return (
     <ContainerInside withBorder width="70%" allWhite>
       <Stack gap={8} px={10}>
@@ -14,24 +14,20 @@ export const AdminDescriptionLayout = () => {
           <RegisterInfo keyInput={"Apellido: "} valueInput={"Briceño"} />
           <RegisterInfo
             keyInput={"Tipo de Admin: "}
-            valueInput={"Super Admin"}
-          />
+            valueInput={"Super Admin"} />
           <RegisterInfo keyInput={"Edad: "} valueInput={"27"} />
           <RegisterInfo
             keyInput={"Correo: "}
-            valueInput={"correo@correo.com"}
-          />
+            valueInput={"correo@correo.com"} />
           <RegisterInfo
             keyInput={"Fecha de Cumpleaños: "}
-            valueInput={"16 Dic. 1996"}
-          />
+            valueInput={"16 Dic. 1996"} />
           <RegisterInfo
             keyInput={"Ubicacion: "}
-            valueInput={"Carabobo, Valencia VE"}
-          />
+            valueInput={"Carabobo, Valencia VE"} />
           <RegisterInfo keyInput={"Oficina: "} valueInput={"Valencia"} />
         </Stack>
       </Stack>
     </ContainerInside>
   );
-};
+}

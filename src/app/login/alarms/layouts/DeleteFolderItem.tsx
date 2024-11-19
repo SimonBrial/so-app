@@ -158,7 +158,7 @@ export default function DeleteFolderItem({
             {dayjs(createAt).format("DD/MM/YYYY - hh: mm A")}
           </Text>
         </Flex>
-        <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+        <GeneralDivider orientation="horizontal"   />
       </Stack>
       <Stack
         gap={2}
@@ -194,7 +194,7 @@ export default function DeleteFolderItem({
             {dayjs(createAt).format("DD/MM/YYYY - hh: mm A")}
           </Text>
         </Flex>
-        <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+        <GeneralDivider orientation="horizontal"   />
       </Stack>
       <Stack
         gap={2}
@@ -230,7 +230,7 @@ export default function DeleteFolderItem({
             {createdTo}
           </Text>
         </Flex>
-        <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+        <GeneralDivider orientation="horizontal"   />
       </Stack>
       <Collapse in={opened}>
         <Text size="sm" style={{ lineHeight: "15px" }}>

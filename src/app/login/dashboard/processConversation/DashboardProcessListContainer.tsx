@@ -8,11 +8,11 @@ import ProcessContainer from "./ProcessContainer";
 
 export const DashboardProcessListContainer = () => {
   return (
-    <ContainerInside allWhite withBorder width="100%" key={crypto.randomUUID()}>
+    <ContainerInside allWhite withBorder width="100%"  >
       <Stack gap={2}>
-        <ProcessContainer key={crypto.randomUUID()} />
-        <SocialMediaContainer key={crypto.randomUUID()} />
-        <RatingContainer key={crypto.randomUUID()} />
+        <ProcessContainer   />
+        <SocialMediaContainer   />
+        <RatingContainer   />
       </Stack>
     </ContainerInside>
   );

@@ -64,7 +64,7 @@ export default function DeleteCardLayout() {
             </Flex>
             <GeneralDivider
               orientation="horizontal"
-              key={crypto.randomUUID()}
+               
             />
           </Stack>
           <Stack gap={1} w={"100%"}>
@@ -98,7 +98,7 @@ export default function DeleteCardLayout() {
             </Flex>
             <GeneralDivider
               orientation="horizontal"
-              key={crypto.randomUUID()}
+               
             />
           </Stack>
           <Stack gap={1} w={"100%"}>
@@ -132,7 +132,7 @@ export default function DeleteCardLayout() {
             </Flex>
             <GeneralDivider
               orientation="horizontal"
-              key={crypto.randomUUID()}
+               
             />
           </Stack>
           <Stack gap={1} w={"100%"}>
@@ -166,7 +166,7 @@ export default function DeleteCardLayout() {
             </Flex>
             <GeneralDivider
               orientation="horizontal"
-              key={crypto.randomUUID()}
+               
             />
           </Stack>
         </Stack>

@@ -137,10 +137,10 @@ export default function TMRChartContainer({
             </Flex>
           </Flex>
         </Flex>
-        <TMRLineChart key={crypto.randomUUID()} />
+        <TMRLineChart   />
         {/* {!checked ? (
         ) : (
-          <TMRBarChart key={crypto.randomUUID()} />
+          <TMRBarChart   />
         )} */}
       </Stack>
     </ContainerInside>

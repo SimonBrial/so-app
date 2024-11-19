@@ -32,7 +32,7 @@ export default function RegisterInfo({
             : valueInput}
         </Title>
       </Flex>
-      <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+      <GeneralDivider orientation="horizontal"   />
     </Box>
   );
 }

@@ -66,7 +66,7 @@ export default function ProcessContainer() {
           key={id}
           id={id}
         />
-        <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+        <GeneralDivider orientation="horizontal"   />
       </Stack>
     );
   });
@@ -126,7 +126,7 @@ export default function ProcessContainer() {
             </Text>
           </Grid.Col>
         </Grid>
-        <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+        <GeneralDivider orientation="horizontal"   />
       </Stack>
       <Container style={{ maxWidth: "100%", width: "100%", padding: "0" }}>
         <DndContext

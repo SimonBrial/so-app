@@ -24,7 +24,7 @@ export default function EventDescriptionLayout() {
       <RegisterInfo
         keyInput={"Titulo: "}
         valueInput={"Generar RCV al cliente de Caracas"}
-        key={crypto.randomUUID()}
+         
       />
       <Stack gap={0}>
         <Flex
@@ -44,7 +44,7 @@ export default function EventDescriptionLayout() {
             <PriorityBadge title="Muy Importante" />
           </Title>
         </Flex>
-        <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+        <GeneralDivider orientation="horizontal"   />
       </Stack>
       <Stack gap={0}>
         <Flex
@@ -62,12 +62,12 @@ export default function EventDescriptionLayout() {
           <Title order={5}>Estado</Title>
           <Title order={5}>No Completado</Title>
         </Flex>
-        <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+        <GeneralDivider orientation="horizontal"   />
       </Stack>
       <RegisterInfo
         keyInput={"Fecha: "}
         valueInput={"Febrero 06, 2024"}
-        key={crypto.randomUUID()}
+         
       />
       <ScrollArea scrollbarSize={2} className={classes.metrics_event_container}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis excepturi

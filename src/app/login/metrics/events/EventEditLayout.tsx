@@ -36,14 +36,14 @@ export default function EventEditLayout() {
             icon={<MdOutlineTitle />}
             inputSize="250px"
             title="Titulo"
-            key={crypto.randomUUID()}
+             
           />
           <HorizontalInputLayout
             asterisk={false}
             icon={<MdOutlineTitle />}
             inputSize="250px"
             title="Estado"
-            key={crypto.randomUUID()}
+             
           /> */}
           <Flex align={"center"} justify={"space-between"}>
             <Title
@@ -89,7 +89,7 @@ export default function EventEditLayout() {
           <Stack gap={6}>
             <GeneralDivider
               orientation="horizontal"
-              key={crypto.randomUUID()}
+               
             />
             <Title
               order={4}
@@ -108,7 +108,7 @@ export default function EventEditLayout() {
               allWhite
               width="100%"
               withBorder
-              key={crypto.randomUUID()}
+               
             >
               <ScrollArea
                 scrollbarSize={2}

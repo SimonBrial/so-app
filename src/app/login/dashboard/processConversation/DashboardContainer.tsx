@@ -18,7 +18,7 @@ export default function DashboardContainer() {
       withBackground
       offset={118}
       withBorder
-      key={crypto.randomUUID()}
+       
     >
       <ScrollArea
         offsetScrollbars
@@ -36,7 +36,7 @@ export default function DashboardContainer() {
             </Stack>
           </Grid.Col>
           <Grid.Col span={3.5}>
-            <DashboardProcessListContainer key={crypto.randomUUID()} />
+            <DashboardProcessListContainer   />
           </Grid.Col>
           <Grid.Col span={3.5}>
             <DonutChartContainer />

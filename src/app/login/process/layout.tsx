@@ -45,7 +45,7 @@ export default function ProcessLayout({
           offset={118}
           withBackground
           withBorder={false}
-          key={crypto.randomUUID()}
+           
         >
           {children}
         </InsideContainer>

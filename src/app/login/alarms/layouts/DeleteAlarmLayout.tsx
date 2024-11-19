@@ -77,7 +77,7 @@ export default function DeleteAlarmLayout({}: {
             </Flex>
             <GeneralDivider
               orientation="horizontal"
-              key={crypto.randomUUID()}
+               
             />
           </Stack>
           <Stack gap={4}>
@@ -115,7 +115,7 @@ export default function DeleteAlarmLayout({}: {
             </Flex>
             <GeneralDivider
               orientation="horizontal"
-              key={crypto.randomUUID()}
+               
             />
           </Stack>
           <Stack gap={4}>
@@ -149,7 +149,7 @@ export default function DeleteAlarmLayout({}: {
             </Flex>
             <GeneralDivider
               orientation="horizontal"
-              key={crypto.randomUUID()}
+               
             />
           </Stack>
           <Stack gap={4}>
@@ -183,7 +183,7 @@ export default function DeleteAlarmLayout({}: {
             </Flex>
             <GeneralDivider
               orientation="horizontal"
-              key={crypto.randomUUID()}
+               
             />
           </Stack>
           <Stack gap={4}>
@@ -217,7 +217,7 @@ export default function DeleteAlarmLayout({}: {
             </Flex>
             <GeneralDivider
               orientation="horizontal"
-              key={crypto.randomUUID()}
+               
             />
           </Stack>
           <Stack gap={4}>
@@ -296,7 +296,7 @@ export default function DeleteAlarmLayout({}: {
             </Flex>
             <GeneralDivider
               orientation="horizontal"
-              key={crypto.randomUUID()}
+               
             />
           </Stack>
           <Stack gap={4}>
@@ -337,7 +337,7 @@ export default function DeleteAlarmLayout({}: {
             </Flex>
             <GeneralDivider
               orientation="horizontal"
-              key={crypto.randomUUID()}
+               
             />
           </Stack>
           <Stack gap={4}>
@@ -357,7 +357,7 @@ export default function DeleteAlarmLayout({}: {
             </Text>
             <GeneralDivider
               orientation="horizontal"
-              key={crypto.randomUUID()}
+               
             />
             <Container
               styles={(theme) => ({
@@ -405,7 +405,7 @@ export default function DeleteAlarmLayout({}: {
         icon=""
         onText
         title="Eliminar Recordatorio"
-        key={crypto.randomUUID()}
+         
       />
       <Container
         styles={(theme) => ({

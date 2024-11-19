@@ -6,29 +6,25 @@ import {
   Drawer,
   Stack,
 } from "@mantine/core";
-import {
-  HiOutlineDotsVertical,
-  HiOutlinePencil,
-} from "@/icons";
+import { HiOutlineDotsVertical, HiOutlinePencil } from "@/icons";
 import classes from "@/styles/btn-styles.module.css";
 import { EditButtonStyles } from "@/types/types";
 import TooltipLayout from "../TooltipLayout";
 import { BtnEditProps } from "@/interface/interface";
-import { useDataBaseStore } from "@/store/db-store";
 
 export default function BtnEdit({
   fnShowEditLayout,
+  fnGetDataById,
   buttonStyles,
   editLayout,
   children,
   id,
 }: BtnEditProps): JSX.Element {
   const { colorScheme } = useMantineColorScheme();
-  const { fnGetUser, fnSetShowEdit } = useDataBaseStore();
 
   const handleEdit = () => {
-    open();
-    fnGetUser(id);
+    fnShowEditLayout(true);
+    fnGetDataById?.(id);
   };
 
   let buttonSty: JSX.Element;
@@ -46,14 +42,14 @@ export default function BtnEdit({
             },
             section: { fontSize: "1.2rem" },
           })}
-          onClick={() => fnShowEditLayout(true)}
+          onClick={handleEdit}
         >
           Editar
         </Button>
       );
     } else if (type === "special") {
       buttonSty = (
-        <TooltipLayout label="Editar" position="top" key={crypto.randomUUID()}>
+        <TooltipLayout label="Editar" position="top">
           <UnstyledButton
             variant="transparent"
             color="gray"
@@ -75,7 +71,7 @@ export default function BtnEdit({
       buttonSty = (
         <UnstyledButton
           style={{ fontSize: "1.5rem" }}
-          onClick={() => fnShowEditLayout(true)}
+          onClick={handleEdit}
           className={classes.btnEdit_folder}
         >
           <Center>
@@ -91,7 +87,7 @@ export default function BtnEdit({
     <>
       <Drawer
         opened={editLayout}
-        onClose={() => fnSetShowEdit(false)}
+        onClose={() => fnShowEditLayout(false)}
         closeOnClickOutside
         position="right"
         overlayProps={{ backgroundOpacity: 0.5, blur: 4 }}

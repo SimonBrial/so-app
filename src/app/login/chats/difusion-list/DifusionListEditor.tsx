@@ -39,7 +39,7 @@ export const DifusionListEditor = (): JSX.Element => {
   return (
     <Stack justify="space-between">
       <InsideContainer
-        key={crypto.randomUUID()}
+         
         withBackground
         offset={245}
         withBorder
@@ -148,7 +148,7 @@ export const DifusionListEditor = (): JSX.Element => {
           id={crypto.randomUUID()}
           title=""
           close={() => console.log("FromBtnSend")}
-          key={crypto.randomUUID()}
+           
         />
         <BtnPreview />
       </Flex>

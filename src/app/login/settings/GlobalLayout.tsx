@@ -5,7 +5,6 @@ import React from "react";
 export const GlobalLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <InsideContainer
-      key={crypto.randomUUID()}
       withBackground
       offset={130}
       withBorder

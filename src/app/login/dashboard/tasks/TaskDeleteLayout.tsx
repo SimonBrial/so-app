@@ -19,7 +19,7 @@ export const TaskDeleteLayout = () => {
         icon=""
         onText
         title="Eliminar Tarea"
-        key={crypto.randomUUID()}
+         
       />
       <Container
         styles={(theme) => ({
@@ -68,7 +68,7 @@ export const TaskDeleteLayout = () => {
             </Flex>
             <GeneralDivider
               orientation="horizontal"
-              key={crypto.randomUUID()}
+               
             />
           </Stack>
           <Stack gap={2} w={"100%"}>
@@ -102,7 +102,7 @@ export const TaskDeleteLayout = () => {
             </Flex>
             <GeneralDivider
               orientation="horizontal"
-              key={crypto.randomUUID()}
+               
             />
           </Stack>
           <Container style={{ overflow: "hidden" }} p={0}>
@@ -124,7 +124,7 @@ export const TaskDeleteLayout = () => {
               </Flex>
               <GeneralDivider
                 orientation="horizontal"
-                key={crypto.randomUUID()}
+                 
               />
             </Stack>
             <ScrollArea

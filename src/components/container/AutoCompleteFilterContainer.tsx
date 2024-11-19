@@ -61,7 +61,7 @@ export default function AutoCompleteFilterContainer({
           </Flex>
           <BadgeClose status={true} />
         </Flex>
-        <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+        <GeneralDivider orientation="horizontal"   />
       </Stack>
     </Container>
   );

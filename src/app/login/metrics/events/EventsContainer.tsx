@@ -14,15 +14,15 @@ export const EventsContainer = () => {
         scrollbarSize={2}
       >
         <Stack gap={4}>
-          <EventsBigCard key={crypto.randomUUID()} />
-          <EventsBigCard key={crypto.randomUUID()} />
-          <EventsBigCard key={crypto.randomUUID()} />
-          <EventsBigCard key={crypto.randomUUID()} />
-          <EventsBigCard key={crypto.randomUUID()} />
-          <EventsBigCard key={crypto.randomUUID()} />
-          <EventsBigCard key={crypto.randomUUID()} />
-          <EventsBigCard key={crypto.randomUUID()} />
-          <EventsBigCard key={crypto.randomUUID()} />
+          <EventsBigCard   />
+          <EventsBigCard   />
+          <EventsBigCard   />
+          <EventsBigCard   />
+          <EventsBigCard   />
+          <EventsBigCard   />
+          <EventsBigCard   />
+          <EventsBigCard   />
+          <EventsBigCard   />
         </Stack>
       </ScrollArea>
     </Stack>

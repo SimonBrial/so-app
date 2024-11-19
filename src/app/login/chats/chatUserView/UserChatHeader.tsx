@@ -89,7 +89,7 @@ export default function UserChatHeader({
         </Stack>
       </Flex>
       <Flex align={"center"}>
-        <BtnFavorities status size="large" key={crypto.randomUUID()} />
+        <BtnFavorities status size="large"   />
         <Divider
           orientation="vertical"
           style={{ margin: "0 0.2rem" }}

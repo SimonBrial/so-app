@@ -135,7 +135,7 @@ export default function DeleteFolderLayout({ idFolder }: { idFolder: string }) {
 
   return (
     <>
-      <TitleSimpleLayout title="Eliminar Carpeta" key={crypto.randomUUID()} />
+      <TitleSimpleLayout title="Eliminar Carpeta"   />
       <Container
         styles={(theme) => ({
           root: {
@@ -187,7 +187,7 @@ export default function DeleteFolderLayout({ idFolder }: { idFolder: string }) {
             </Flex>
             <GeneralDivider
               orientation="horizontal"
-              key={crypto.randomUUID()}
+               
             />
           </Stack>
           <Stack gap={4} w={"100%"}>
@@ -213,7 +213,7 @@ export default function DeleteFolderLayout({ idFolder }: { idFolder: string }) {
             </Text>
             <GeneralDivider
               orientation="horizontal"
-              key={crypto.randomUUID()}
+               
             />
           </Stack>
           <Container

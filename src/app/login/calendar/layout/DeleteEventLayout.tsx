@@ -198,7 +198,7 @@ export default function DeleteEventLayout({
               </Flex>
               <GeneralDivider
                 orientation="horizontal"
-                key={crypto.randomUUID()}
+                 
               />
             </Stack>
             <Stack gap={1} w={"100%"}>
@@ -217,7 +217,7 @@ export default function DeleteEventLayout({
               </Text>
               <GeneralDivider
                 orientation="horizontal"
-                key={crypto.randomUUID()}
+                 
               />
               <Container
                 styles={(theme) => ({

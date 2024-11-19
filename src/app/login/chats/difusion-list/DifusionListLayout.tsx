@@ -63,7 +63,7 @@ export const DifusionListLayout = (): JSX.Element => {
               })}
             />
           </Flex>
-          <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+          <GeneralDivider orientation="horizontal"   />
           <Flex
             justify={"space-between"}
             align={"center"}
@@ -94,7 +94,7 @@ export const DifusionListLayout = (): JSX.Element => {
         </Stack>
         <Stack gap={8}>
           <InsideContainer
-            key={crypto.randomUUID()}
+             
             offset={295}
             withBackground={false}
             withBorder={false}

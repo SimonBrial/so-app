@@ -87,7 +87,7 @@ export const HistoryCard = () => {
           </Stack>
         </Flex>
         <Flex align={"center"} gap={6}>
-          <GeneralDivider orientation="vertical" key={crypto.randomUUID()} />
+          <GeneralDivider orientation="vertical"   />
           <Stack gap={0} align="center">
             <Text
               styles={(theme) => ({

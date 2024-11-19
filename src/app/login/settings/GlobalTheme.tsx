@@ -87,7 +87,7 @@ export const GlobalTheme = () => {
           </Center>
         </Flex>
       </Flex>
-      <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+      <GeneralDivider orientation="horizontal"   />
     </Stack>
   );
 };

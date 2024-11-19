@@ -23,7 +23,7 @@ export default function DeleteTemplateLayout({
   const { colorScheme } = useMantineColorScheme();
   return (
     <Stack gap={8}>
-      <TitleSimpleLayout title="Eliminar Formato" key={crypto.randomUUID()} />
+      <TitleSimpleLayout title="Eliminar Formato"   />
       <Container
         styles={(theme) => ({
           root: {
@@ -73,7 +73,7 @@ export default function DeleteTemplateLayout({
             </Flex>
             <GeneralDivider
               orientation="horizontal"
-              key={crypto.randomUUID()}
+               
             />
           </Stack>
           <Stack gap={1} w={"100%"}>
@@ -107,7 +107,7 @@ export default function DeleteTemplateLayout({
             </Flex>
             <GeneralDivider
               orientation="horizontal"
-              key={crypto.randomUUID()}
+               
             />
           </Stack>
           <Stack gap={1} w={"100%"}>
@@ -141,7 +141,7 @@ export default function DeleteTemplateLayout({
             </Flex>
             <GeneralDivider
               orientation="horizontal"
-              key={crypto.randomUUID()}
+               
             />
           </Stack>
           <Stack gap={4} w={"100%"}>
@@ -161,7 +161,7 @@ export default function DeleteTemplateLayout({
               </Text>
               <GeneralDivider
                 orientation="horizontal"
-                key={crypto.randomUUID()}
+                 
               />
             </Stack>
             <Container

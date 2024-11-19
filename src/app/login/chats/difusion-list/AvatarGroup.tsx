@@ -88,11 +88,11 @@ export const AvatarGroup = ({
                 key={index}
                 size={"lg"}
                 variant="filled"
-                style={({
+                style={{
                   position: "absolute",
                   marginLeft: `calc(2.9rem*${index})`,
                   borderLeft: "3px solid white",
-                })}
+                }}
               />
             ))}
           </Flex>
@@ -102,7 +102,7 @@ export const AvatarGroup = ({
   }
   function generateNameGroup(usersArr: string[]): JSX.Element[] {
     nameGroup = usersArr.map((user, index) => (
-      <Flex gap={4} key={crypto.randomUUID()}>
+      <Flex gap={4} key={index}>
         <Text
           styles={(theme) => ({
             root: {
@@ -113,7 +113,6 @@ export const AvatarGroup = ({
                   : `${theme.colors.darkTheme[2]}`,
             },
           })}
-          key={index}
         >
           {user}
         </Text>
@@ -133,7 +132,7 @@ export const AvatarGroup = ({
   return (
     <Stack style={{ width: "100%" }} gap={5}>
       {generateAvatarGroup(usersArr)}
-      <GeneralDivider orientation="horizontal" key={crypto.randomUUID()}/>
+      <GeneralDivider orientation="horizontal" />
       <Flex gap={4}>{generateNameGroup(usersArr)}</Flex>
     </Stack>
   );

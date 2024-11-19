@@ -20,48 +20,48 @@ export const SidebarSectionContainer = () => {
       })}
     >
       <Text>Secciones de la Sidebar</Text>
-      <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+      <GeneralDivider orientation="horizontal"   />
       <SidebarSectionSelection
-        key={crypto.randomUUID()}
+         
         label="Dashboard"
         selected
       />
       <SidebarSectionSelection
-        key={crypto.randomUUID()}
+         
         label="Process"
         selected
       />
       <SidebarSectionSelection
-        key={crypto.randomUUID()}
+         
         label="Chats"
         selected
       />
       <SidebarSectionSelection
-        key={crypto.randomUUID()}
+         
         label="Base de Datos"
         selected
       />
       <SidebarSectionSelection
-        key={crypto.randomUUID()}
+         
         label="Calendario"
         selected
       />
       <SidebarSectionSelection
-        key={crypto.randomUUID()}
+         
         label="Correo"
         selected
       />
       <SidebarSectionSelection
-        key={crypto.randomUUID()}
+         
         label="Recordatorios"
         selected
       />
       <SidebarSectionSelection
-        key={crypto.randomUUID()}
+         
         label="Bloc de Notas"
         selected
       />
-      <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+      <GeneralDivider orientation="horizontal"   />
     </Stack>
   );
 };

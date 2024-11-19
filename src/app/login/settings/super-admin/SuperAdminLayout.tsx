@@ -2,7 +2,6 @@
 
 import InsideContainer from "@/components/container/InsideContainer";
 import { Stack, useMantineColorScheme } from "@mantine/core";
-import React from "react";
 
 export const SuperAdminLayout = ({
   children,
@@ -10,13 +9,27 @@ export const SuperAdminLayout = ({
   children: React.ReactNode;
 }) => {
   const { colorScheme } = useMantineColorScheme();
+
   return (
-    <InsideContainer
-      key={crypto.randomUUID()}
-      withBorder={false}
-      withBackground
-      offset={130}
-    >
+    <InsideContainer withBorder={false} withBackground offset={130}>
+      {/* <Box
+        h={40}
+        style={{
+          position: "absolute",
+          marginTop: "-3.8rem",
+          marginRight: "0rem",
+        }}
+      >
+        <BtnAdd
+          fnShow={setAddAdminlayout}
+          showDrawer={showAddAdminlayout}
+          iconTag="add-user"
+          label={"Nuevo Admin"}
+        >
+          prueba
+          <Button onClick={() => setAddAdminlayout(false)}>close</Button>
+        </BtnAdd>
+      </Box> */}
       <Stack
         gap={16}
         styles={(theme) => ({

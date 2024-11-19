@@ -164,7 +164,7 @@ export default function ItemBigCardContainer() {
       <Stack gap={8}>
         <Flex gap={8} align={"center"}>
           <MetricsFilterInput btnDisable={false} />
-          <GeneralDivider orientation="vertical" key={crypto.randomUUID()} />
+          <GeneralDivider orientation="vertical"   />
           <Select
             styles={(theme) => ({
               section: {
@@ -184,7 +184,7 @@ export default function ItemBigCardContainer() {
             onChange={setValueSelected}
             placeholder="Filtrar tareas..."
             data={selectValueArr} />
-          <GeneralDivider orientation="vertical" key={crypto.randomUUID()} />
+          <GeneralDivider orientation="vertical"   />
           <WarningInfo description="Seleccionar Rango de fechas" />
           <DatePickerInput
             styles={(theme) => ({

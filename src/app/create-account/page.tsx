@@ -2,7 +2,7 @@ import { Container, Flex } from "@mantine/core";
 import Image from "next/image";
 import LoginImg from "../../../public/loginImg.jpg";
 import classes from "@/styles/login.module.css";
-import CreateAccountForm from "./CreateAccountForm";
+import CreateAccountLayout from "./layout/CreateAccountLayout";
 
 function CreateAccountPage(): JSX.Element {
   return (
@@ -19,7 +19,7 @@ function CreateAccountPage(): JSX.Element {
           color: "#F8F8F8",
         }}
       >
-        <CreateAccountForm />
+        <CreateAccountLayout />
       </Container>
       <Image
         alt="bg login app"

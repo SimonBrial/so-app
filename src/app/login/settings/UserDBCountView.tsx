@@ -54,7 +54,7 @@ export const UserDBCountView = () => {
           onChange={setValue}
         />
       </Flex>
-      <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+      <GeneralDivider orientation="horizontal"   />
     </Stack>
   );
 };

@@ -99,7 +99,7 @@ export const ProcessedConversationContainer = () => {
           >
             Conversaciones Procesadas
           </Title>
-          <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+          <GeneralDivider orientation="horizontal"   />
         </Stack>
         <DndContext
           modifiers={[restrictToHorizontalAxis]}

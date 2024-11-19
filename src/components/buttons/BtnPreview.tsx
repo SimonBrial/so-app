@@ -32,7 +32,7 @@ export const BtnPreview = (): JSX.Element => {
             offset={115}
             withBackground
             withBorder
-            key={crypto.randomUUID()}
+             
           >
             <ScrollArea
               scrollbarSize={2}

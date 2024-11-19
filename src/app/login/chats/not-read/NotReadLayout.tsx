@@ -23,7 +23,7 @@ export const NotReadLayout = (): JSX.Element => {
     <Stack gap={3}>
       <TitleLayout color="" icon="" onText title="No Leidos" />
       <AsideSearch />
-      <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+      <GeneralDivider orientation="horizontal"   />
       <Flex
         justify={"space-between"}
         align={"center"}
@@ -56,7 +56,7 @@ export const NotReadLayout = (): JSX.Element => {
           offset={257}
           withBackground={false}
           withBorder={false}
-          key={crypto.randomUUID()}
+           
         >
           <ScrollArea
             h={"100%"}

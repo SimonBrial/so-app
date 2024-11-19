@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-misused-promises */
 "use client";
 
 import {
@@ -11,7 +10,6 @@ import {
 } from "@mantine/core";
 import { IoClose } from "@/icons";
 import { useForm } from "react-hook-form";
-// import { useDisclosure } from "@mantine/hooks";
 import classesBtn from "@/styles/btn-styles.module.css";
 import { notifications } from "@mantine/notifications";
 import TitleSimpleLayout from "@/components/layout/TitleSimpleLayout";
@@ -175,9 +173,9 @@ export default function Prueba() {
                   ? classesBtn.btnAdd
                   : classesBtn.btnAdd_dark,
             }}
-            styles={({
+            styles={{
               section: { fontSize: "1.2rem" },
-            })}
+            }}
             onClick={() => {
               notifications.show({
                 id: crypto.randomUUID(),

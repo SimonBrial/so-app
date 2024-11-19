@@ -5,8 +5,8 @@ import { TabTimeView } from "./TabTimeView";
 function DashboardPage(): JSX.Element {
   return (
     <Stack gap={4}>
-      <TabTimeView key={crypto.randomUUID()} />
-      <DashboardContainer key={crypto.randomUUID()} />
+      <TabTimeView   />
+      <DashboardContainer   />
     </Stack>
   );
 }

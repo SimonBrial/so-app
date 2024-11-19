@@ -47,7 +47,7 @@ export const DifusionListChat = (): JSX.Element => {
           title="Mensajes enviado a la lista de Difusion"
           labelBtn="Enviar Mensaje"
           close={() => console.log("FromBtnSend")}
-          key={crypto.randomUUID()}
+           
         />
       </Flex>
     </Stack>

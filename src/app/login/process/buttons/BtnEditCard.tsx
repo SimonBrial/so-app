@@ -36,7 +36,7 @@ export function BtnEditCard({ editRef }: { editRef: any }) {
             icon={<HiOutlineSave />}
             title="Guardar"
             close={close}
-            key={crypto.randomUUID()}
+             
           /> */}
           prueba
         </Stack>

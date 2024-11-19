@@ -21,7 +21,7 @@ export const FavoritiesLayout = (): JSX.Element => {
           offset={248}
           withBackground={false}
           withBorder={false}
-          key={crypto.randomUUID()}
+           
         >
           <ScrollArea
             h={"100%"}

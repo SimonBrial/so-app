@@ -24,9 +24,9 @@ import { notifications } from "@mantine/notifications";
 import { useDisclosure } from "@mantine/hooks";
 import DeleteCardLayout from "../layouts/DeleteCardLayout";
 import { useState } from "react";
-import EditCardLayout from "../layouts/EditCardLayout";
 import { UniqueIdentifier } from "@dnd-kit/core";
 import { useProcessStore } from "@/store/process-store";
+import UpdateCardLayout from "../layouts/UpdateCardLayout";
 
 export default function BtnCardAction({
   idCard,
@@ -121,7 +121,7 @@ export default function BtnCardAction({
           }}
         >
           <Stack justify="space-between" style={{ height: "95vh" }}>
-            <EditCardLayout onShow={setShowDrawer} />
+            <UpdateCardLayout onShow={setShowDrawer} />
             {/* <Flex
               align={"center"}
               gap={"sm"}

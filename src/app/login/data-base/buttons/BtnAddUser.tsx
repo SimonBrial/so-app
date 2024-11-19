@@ -1,29 +1,9 @@
-/* eslint-disable no-unneeded-ternary */
-/* eslint-disable @typescript-eslint/no-misused-promises */
 "use client";
 
 import { useMantineColorScheme, Button, Drawer, Stack } from "@mantine/core";
 import { HiOutlineUserAdd } from "@/icons";
 import classesBtn from "@/styles/btn-styles.module.css";
 import { useDataBaseStore } from "@/store/db-store";
-import React from "react";
-
-/*
-{
-  description,
-  children,
-  labelBtn,
-  iconTag,
-  loading,
-  classes,
-  color,
-  title,
-  addFn,
-  label,
-  icon,
-  id,
-}: BtnAddProps
-*/
 
 export default function BtnAddUser({
   children,
@@ -31,7 +11,6 @@ export default function BtnAddUser({
   children: React.ReactNode;
 }): JSX.Element {
   const { colorScheme } = useMantineColorScheme();
-
   const { fnSetShow, showRegisterLayout } = useDataBaseStore();
 
   return (
@@ -85,7 +64,6 @@ export default function BtnAddUser({
               ? classesBtn.btnAdd
               : classesBtn.btnAdd_dark,
         }}
-        key={crypto.randomUUID()}
       >
         Nuevo Usuario
       </Button>

@@ -113,9 +113,9 @@ export function Sidebar(): JSX.Element {
           {links}
         </Stack>
         <Stack justify="center" gap={12} align="center">
-          <NotificationIcon active key={crypto.randomUUID()} />
+          <NotificationIcon active   />
           <NavIcon
-            key={crypto.randomUUID()}
+             
             dir={"/"}
             icon={<HiOutlineLogout className={classes.icon} />}
             label={"Logout"}

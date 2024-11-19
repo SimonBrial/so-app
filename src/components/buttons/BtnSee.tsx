@@ -48,7 +48,7 @@ export default function BtnSee({
           <BtnBack close={close} label="Volver" />
         </Stack>
       </Drawer>
-      <TooltipLayout label="Ver" position="top" key={crypto.randomUUID()}>
+      <TooltipLayout label="Ver" position="top"  >
         <UnstyledButton
           variant="transparent"
           color="gray"

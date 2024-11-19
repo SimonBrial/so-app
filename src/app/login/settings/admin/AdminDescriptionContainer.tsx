@@ -1,19 +1,10 @@
-import React from "react";
-import { AdminEditLayout } from "./AdminEditLayout";
-import { AdminDescriptionLayout } from "./AdminDescriptionLayout";
+import AdminDescriptionLayout from "./AdminDescriptionLayout";
+import AdminEditLayout from "./AdminEditLayout";
 
-export const AdminDescriptionContainer = ({
+export default function AdminDescriptionContainer({
   editing,
 }: {
   editing: boolean;
-}) => {
-  return (
-    <>
-      {editing ? (
-        <AdminEditLayout key={crypto.randomUUID()} />
-      ) : (
-        <AdminDescriptionLayout key={crypto.randomUUID()} />
-      )}
-    </>
-  );
-};
+}) {
+  return <>{editing ? <AdminEditLayout /> : <AdminDescriptionLayout />}</>;
+}

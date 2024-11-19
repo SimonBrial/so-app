@@ -72,8 +72,8 @@ export const DonutChartContainer = () => {
           </Table.Tr>
         </Table.Thead>
         <Table.Tbody>
-          {DonutData.map((element) => (
-            <Table.Tr key={crypto.randomUUID()}>
+          {DonutData.map((element, idx) => (
+            <Table.Tr key={idx}>
               <Table.Td>{element.name}</Table.Td>
               <Table.Td>{element.currentValue}</Table.Td>
               <Table.Td>{element.goal}</Table.Td>

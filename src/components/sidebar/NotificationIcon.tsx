@@ -199,7 +199,7 @@ export default function NotificationIcon({ active }: { active: boolean }) {
                     descriptions={item.description}
                     section={section.sectionName}
                     onCloseFn={handleCloseMenu}
-                    key={crypto.randomUUID()}
+                     
                     dir={item.dir}
                   />
                 </Menu.Item>

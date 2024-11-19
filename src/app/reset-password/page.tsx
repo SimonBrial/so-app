@@ -2,7 +2,7 @@ import { Container, Flex } from "@mantine/core";
 import Image from "next/image";
 import LoginImg from "../../../public/loginImg.jpg";
 import classes from "@/styles/login.module.css";
-import ResetPasswordForm from "./ResetPasswordForm";
+import ResetPasswordLayout from "./layout/ResetPasswordLayout";
 
 function CreateAccountPage(): JSX.Element {
   return (
@@ -18,7 +18,7 @@ function CreateAccountPage(): JSX.Element {
           color: "#F8F8F8",
         }}
       >
-        <ResetPasswordForm />
+        <ResetPasswordLayout />
       </Container>
       <Image
         alt="bg login app"

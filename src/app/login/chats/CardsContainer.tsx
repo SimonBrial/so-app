@@ -11,9 +11,9 @@ export default function CardsContainer(): JSX.Element {
       scrollHideDelay={100}
       style={{ width: "100%" }}
     >
-      <CardChatContainer header="whatsapp" key={crypto.randomUUID()} />
-      <CardChatContainer header="instagram" key={crypto.randomUUID()} />
-      <CardChatContainer header="facebook" key={crypto.randomUUID()} />
+      <CardChatContainer header="whatsapp"   />
+      <CardChatContainer header="instagram"   />
+      <CardChatContainer header="facebook"   />
     </ScrollArea>
   );
 }

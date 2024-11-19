@@ -1,4 +1,3 @@
-import React from "react";
 import { SuperAdminLayout } from "./SuperAdminLayout";
 import { UserContainer } from "./UserContainer";
 import { ScrollArea, Stack } from "@mantine/core";

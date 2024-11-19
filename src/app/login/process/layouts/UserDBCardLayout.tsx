@@ -110,7 +110,7 @@ export default function UserDBCardLayout({
 
       <Collapse in={opened}>
         <Stack gap={6} my={2}>
-          <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+          <GeneralDivider orientation="horizontal"   />
           <Flex
             gap={0}
             className={
@@ -124,7 +124,7 @@ export default function UserDBCardLayout({
             <Text size="xs">Vehiculo</Text>
             <Text style={{ marginTop: "-0.25rem" }}>Jeep</Text>
           </Flex>
-          <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+          <GeneralDivider orientation="horizontal"   />
           <Flex
             gap={0}
             className={
@@ -138,7 +138,7 @@ export default function UserDBCardLayout({
             <Text size="xs">Zona</Text>
             <Text style={{ marginTop: "-0.25rem" }}>Carabobo</Text>
           </Flex>
-          <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+          <GeneralDivider orientation="horizontal"   />
           <Flex
             justify={"space-between"}
             className={
@@ -151,7 +151,7 @@ export default function UserDBCardLayout({
             <Text size="xs">Placa del vehiculo</Text>
             <Text style={{ marginTop: "-0.25rem" }}>DA58TG</Text>
           </Flex>
-          <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+          <GeneralDivider orientation="horizontal"   />
           <Flex
             justify={"space-between"}
             className={
@@ -166,7 +166,7 @@ export default function UserDBCardLayout({
           </Flex>
         </Stack>
         <Stack gap={6} my={2}>
-          <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+          <GeneralDivider orientation="horizontal"   />
           <Flex
             justify={"space-between"}
             className={
@@ -181,7 +181,7 @@ export default function UserDBCardLayout({
           </Flex>
         </Stack>
         <Stack gap={6} my={2}>
-          <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+          <GeneralDivider orientation="horizontal"   />
           <Flex
             justify={"space-between"}
             className={
@@ -196,7 +196,7 @@ export default function UserDBCardLayout({
           </Flex>
         </Stack>
         <Stack gap={6} my={2}>
-          <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+          <GeneralDivider orientation="horizontal"   />
           <Flex
             justify={"space-between"}
             className={
@@ -211,7 +211,7 @@ export default function UserDBCardLayout({
           </Flex>
         </Stack>
         <Stack gap={6} my={2}>
-          <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+          <GeneralDivider orientation="horizontal"   />
           <Flex
             justify={"space-between"}
             className={

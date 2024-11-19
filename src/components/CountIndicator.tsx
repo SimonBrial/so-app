@@ -14,7 +14,7 @@ export function CountIndicator({
     <TooltipLayout
       label={`${description}: ${count}`}
       position="bottom"
-      key={crypto.randomUUID()}
+       
     >
       <Button
         leftSection={iconSection}

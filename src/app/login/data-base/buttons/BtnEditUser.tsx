@@ -25,7 +25,6 @@ import {
 } from "@/icons";
 import classesBtn from "@/styles/btn-styles.module.css";
 import heightClass from "@/styles/height-view.module.css";
-// import { notifications } from "@mantine/notifications";
 import HorizontalInputLayout from "@/components/inputs/HorizontalInputLayout";
 import TitleSimpleLayout from "@/components/layout/TitleSimpleLayout";
 import StatusSelect from "@/components/inputs/StatusSelect";
@@ -70,8 +69,12 @@ export default function BtnEditUser({
 
   useEffect(() => {
     const fetchData = async () => {
-      if (dataToShow[0] !== undefined) {
-        setData(dataToShow);
+      try {
+        if (dataToShow[0] !== undefined) {
+          setData(dataToShow);
+        }
+      } catch (err) {
+        console.log(err);
       }
     };
     fetchData();
@@ -430,7 +433,7 @@ export default function BtnEditUser({
           </Stack>
         </Stack>
       </Drawer>
-      <TooltipLayout label="Editar" position="top" key={crypto.randomUUID()}>
+      <TooltipLayout label="Editar" position="top">
         <UnstyledButton
           variant="transparent"
           color="gray"

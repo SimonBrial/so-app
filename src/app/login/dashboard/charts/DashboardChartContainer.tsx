@@ -128,7 +128,7 @@ export const DashboardChartContainer = ({
               paddingTop: "1rem",
             }}
           >
-            <BarChart key={crypto.randomUUID()} />
+            <BarChart   />
           </Box>
         )}
       </Stack>

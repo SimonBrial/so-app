@@ -58,7 +58,7 @@ export const SocialMediaContainer = () => {
     return (
       <Stack key={id} gap={1}>
         <SocialMediaItem id={id} rating={rating} title={title} />
-        <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+        <GeneralDivider orientation="horizontal"   />
       </Stack>
     );
   });
@@ -103,7 +103,7 @@ export const SocialMediaContainer = () => {
             </Text>
           </Grid.Col>
         </Grid>
-        <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+        <GeneralDivider orientation="horizontal"   />
       </Stack>
       <Container style={{ maxWidth: "100%", width: "100%", padding: "0" }}>
         <DndContext

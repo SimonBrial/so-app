@@ -8,7 +8,7 @@ export const AdminLayout = ({ children }: { children: React.ReactNode }) => {
   const { colorScheme } = useMantineColorScheme();
   return (
     <InsideContainer
-      key={crypto.randomUUID()}
+       
       withBorder={false}
       withBackground
       offset={130}

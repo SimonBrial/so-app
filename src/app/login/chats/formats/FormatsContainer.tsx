@@ -14,7 +14,7 @@ export const FormatsContainer = () => {
         allWhite
         width="100%"
         withBorder
-        key={crypto.randomUUID()}
+         
       >
         <ScrollArea
           scrollbarSize={2}
@@ -31,7 +31,7 @@ export const FormatsContainer = () => {
         <BtnSend
           close={() => console.log("From FormatsContainer")}
           labelBtn="Crear Plantilla"
-          key={crypto.randomUUID()}
+           
           id={crypto.randomUUID()}
           title="Plantilla Creada"
           description="La plantilla ha sido creada satisfactoriamente 😎!"

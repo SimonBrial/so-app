@@ -10,18 +10,33 @@ import {
   Badge,
   Flex,
   Text,
+  Button,
   Box,
 } from "@mantine/core";
 import { BiCrown } from "@/icons";
-import BtnAdd from "@/components/buttons/BtnAdd";
-import { SuperAdminCard } from "./SuperAdminCard";
+import { AdminCard } from "./AdminCard";
 import { GeneralDivider } from "@/components/GeneralDivider";
 import { labelType } from "@/types/types";
-import { SuperAdminUserLayout } from "./SuperAdminUserLayout";
+import { useSettingsStore } from "@/store/setting-store";
+import BtnAdd from "@/components/buttons/BtnAdd";
+
+const testArray = [
+  "Admin",
+  "Super Admin",
+  "Admin",
+  "Super Admin",
+  "Admin",
+  "Super Admin",
+  "Admin",
+  "Super Admin",
+  "Admin",
+  "Super Admin",
+];
 
 export const UserContainer = ({ label }: { label: labelType }) => {
   const [opened, { toggle }] = useDisclosure(false);
   const { colorScheme } = useMantineColorScheme();
+  const { setAddAdminlayout, showAddAdminlayout } = useSettingsStore();
   return (
     <Container
       p={12}
@@ -52,9 +67,13 @@ export const UserContainer = ({ label }: { label: labelType }) => {
                 styles={(theme) => ({
                   root: {
                     color:
-                      colorScheme === "light"
-                        ? `${theme.colors.principalTheme[6]}`
-                        : `${theme.colors.darkTheme[1]}`,
+                      label === "Super Admin"
+                        ? colorScheme === "light"
+                          ? `${theme.colors.lightTheme[6]}`
+                          : `${theme.colors.darkTheme[1]}`
+                        : colorScheme === "light"
+                        ? `${theme.colors.lightTheme[1]}`
+                        : `${theme.colors.darkTheme[9]}`,
                   },
                 })}
               >
@@ -89,49 +108,37 @@ export const UserContainer = ({ label }: { label: labelType }) => {
             </Flex>
             <Box h={40}>
               <BtnAdd
-                fnShow={() => {}}
-                showDrawer
+                fnShow={setAddAdminlayout}
+                showDrawer={showAddAdminlayout}
                 iconTag="add-user"
-                label={
-                  label === "Super Admin" ? "Nuevo Super Admin" : "Nuevo Admin"
-                }
-                // addFn={toggle}
-                key={crypto.randomUUID()}
-                // id={crypto.randomUUID()}
-                // labelBtn="Crear Usuario"
-                // color="green"
-                /* title={
-                  label === "Super Admin"
-                    ? "Creado Nuevo Super Admin"
-                    : "Creado Nuevo Admin"
-                } */
-                /* description={
-                  label === "Super Admin"
-                    ? "El registro del usuario (SUPER ADMIN), ha sido creado satisfactoriamente 😎!"
-                    : "El registro del usuario (ADMIN), ha sido creado satisfactoriamente 😎!"
-                } */
+                label={`Nuevo ${label}`}
               >
-                <SuperAdminUserLayout />
+                prueba
+                <Button onClick={() => setAddAdminlayout(false)}>close</Button>
               </BtnAdd>
             </Box>
           </Flex>
-          <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+          <GeneralDivider orientation="horizontal" />
         </Stack>
         <Collapse in={opened}>
           <Stack gap={5}>
-            {/* Esto es solo para mostrar los valores en la interfaz */}
-            {new Array(10)
-              .fill(1)
-              .map((item, index) =>
-                index % 2 === 0 ? (
-                  <SuperAdminCard admin={false} key={index} />
-                ) : (
-                  <SuperAdminCard admin key={index} />
-                ),
-              )}
+            {testArray.map((item, index) =>
+              index % 2 === 0 ? (
+                <AdminCard
+                  admin={item === "Super Admin" ? true : false}
+                  key={index}
+                />
+              ) : (
+                <AdminCard
+                  admin={item === "Super Admin" ? true : false}
+                  key={index}
+                />
+              ),
+            )}
           </Stack>
         </Collapse>
       </Stack>
     </Container>
   );
 };
+// TODO: Something is happening with the drawner, it's shows even doesn't click on the button

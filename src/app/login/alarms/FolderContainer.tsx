@@ -8,7 +8,7 @@ import {
   Flex,
   Text,
 } from "@mantine/core";
-import AlarmFolder from "./AlarmFolder";
+import ReadAlarmFolder from "./layouts/ReadAlarmFolder";
 import { ContainerInside } from "@/components/container/ContainerInside";
 import { useAlarmStore } from "@/store/alarm-store";
 import { PiFolderSimpleDashed } from "@/icons";
@@ -26,7 +26,7 @@ export default function FolderContainer(): JSX.Element {
     setShowData(searchTerm !== "" ? results : alarmFolderArray);
   }, [searchTerm, alarmFolderArray, results]);
 
-  function folderArray() {
+  const folderArray = () => {
     if (showData.length > 0) {
       const searchingFolder = showData.some(
         (data) => data.title.toLowerCase() === searchTerm.toLowerCase(),
@@ -64,25 +64,7 @@ export default function FolderContainer(): JSX.Element {
         >
           <Stack gap={12}>
             {showData.map((folder) => {
-              const {
-                alarmsArray,
-                description,
-                themeColor,
-                idFolder,
-                title,
-                icon,
-              } = folder;
-              return (
-                <AlarmFolder
-                  description={description}
-                  key={crypto.randomUUID()}
-                  alarmsArray={alarmsArray}
-                  themeColor={themeColor}
-                  idFolder={idFolder}
-                  title={title}
-                  icon={icon}
-                />
-              );
+              return <ReadAlarmFolder key={folder.idFolder} folderObj={folder} />;
             })}
           </Stack>
         </ScrollArea>
@@ -109,7 +91,7 @@ export default function FolderContainer(): JSX.Element {
         <Text size="3rem">No hay carpetas existentes</Text>
       </Flex>
     );
-  }
+  };
   return (
     <ContainerInside width="70%" allWhite={false} withBorder>
       {folderArray()}

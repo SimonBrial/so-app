@@ -10,7 +10,6 @@ import {
   processTitle,
   SectionTypes,
   degreeType,
-  cardSize,
 } from "../types/types";
 import { Path, UseFormRegister } from "react-hook-form";
 
@@ -201,6 +200,7 @@ interface BtnEditProps {
   buttonStyles: EditButtonStyles;
   fnShowEditLayout: (valueState: boolean) => void;
   editLayout: boolean;
+  fnGetDataById?: (dataId: string) => void;
 }
 interface AutoCompleteData {
   label: string | string[];
@@ -265,7 +265,6 @@ interface EventCardProps {
   userToAssign: string;
   description: string;
   degree: degreeType;
-  cardSize: cardSize;
   title: string;
   id: string;
   date: Date;

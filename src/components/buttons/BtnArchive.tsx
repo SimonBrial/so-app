@@ -29,7 +29,7 @@ export default function BtnArchive({
     <TooltipLayout
       label={!readMail ? "Archivar" : "Desarchivar"}
       position="bottom"
-      key={crypto.randomUUID()}
+       
     >
       <UnstyledButton
         mb={0}

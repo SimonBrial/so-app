@@ -20,10 +20,7 @@ export default function SettingsPageContainer() {
         <SidebarSectionContainer />
       </Stack>
       <Flex gap={4}>
-        <BtnCancel
-          fnCancel={() => console.log("From settings/page.tsx")}
-          key={crypto.randomUUID()}
-        />
+        <BtnCancel fnCancel={() => console.log("From settings/page.tsx")} />
         <BtnSave
           id={crypto.randomUUID()}
           description="Los cambios han sido guardados satisfactoramente!"

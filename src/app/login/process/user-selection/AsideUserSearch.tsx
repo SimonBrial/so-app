@@ -47,7 +47,7 @@ export default function AsideUserSearch() {
             withStyles={false}
           />
         </Box>
-        <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+        <GeneralDivider orientation="horizontal"   />
         <Flex align={"center"} gap={4}>
           <UnstyledButton
             variant="transparent"
@@ -93,7 +93,7 @@ export default function AsideUserSearch() {
           offset={310}
           withBackground
           withBorder
-          key={crypto.randomUUID()}
+           
         >
           <ScrollArea
             h={"100%"}
@@ -109,7 +109,7 @@ export default function AsideUserSearch() {
             </Stack>
           </ScrollArea>
         </InsideContainer>
-        <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+        <GeneralDivider orientation="horizontal"   />
         <Flex
           justify={"space-between"}
           align={"center"}

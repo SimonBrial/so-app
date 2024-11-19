@@ -54,7 +54,7 @@ export default function MailLayout({
         offset={118}
         withBackground={false}
         withBorder={false}
-        key={crypto.randomUUID()}
+         
       >
         {children}
       </InsideContainer>

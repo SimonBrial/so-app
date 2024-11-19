@@ -9,7 +9,7 @@ function page(): JSX.Element {
       offset={118}
       withBackground
       withBorder
-      key={crypto.randomUUID()}
+       
     >
       <Flex
         gap={16}

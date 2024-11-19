@@ -93,7 +93,7 @@ export const MetricsFilterInput = ({
               <BtnAdd
                 // iconTag="add-event"
                 label="Nueva Meta"
-                key={crypto.randomUUID()}
+                 
                 fnShow={() => { }}
                 iconTag="goal"
                 showDrawer
@@ -110,7 +110,7 @@ export const MetricsFilterInput = ({
             <></>
           )}
         </Flex>
-        <GeneralDivider orientation="horizontal" key={crypto.randomUUID()} />
+        <GeneralDivider orientation="horizontal"   />
       </Stack>
     </Container>
   );
